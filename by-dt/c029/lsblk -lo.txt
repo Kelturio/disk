@@ -1,0 +1,3 @@
+NAME MOUNTPOINT                 UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL      MODEL            SERIAL
+sdb                                                                         149,1G    512     512     512    1 disk 0x5000cca601cb9b1d usb             2115             101122PBPB08EC0UJGNF
+sdb1 /media/searinox/New Volume 24D22BCBD22B9FD2                     ntfs     149G    512     512     512    1 part 0x5000cca601cb9b1d      New Volume                  
