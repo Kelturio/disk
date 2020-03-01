@@ -1,0 +1,1 @@
+           ID-3: /dev/sdb type: USB vendor: Corsair model: Force 3 SSD size: 55.90 GiB serial: 11246518000007430954 

@@ -1,0 +1,39 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-40-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+Drive found in smartmontools Database.  Drive identity strings:
+MODEL:              Corsair Force 3 SSD
+FIRMWARE:           1.2
+match smartmontools Drive Database entry:
+MODEL REGEXP:       SandForce 1st Ed\.|ADATA SSD S(396|510|599) .?..GB|ADATA SP[389]00|ADATA SSD S[PX]900 (64|128|256|512)GB-DL2|ADATA XM11 (128|256)GB|ATP Velocity MIV (60|120|240|480)GB|Corsair CSSD-F(40|60|80|115|120|160|240)GBP?2.*|Corsair Force ((3 |LS )?SSD|GS|GT)|FM-25S2S-(60|120|240)GBP2|FTM(06|12|24|48)CT25H|KINGSTON SE50S3(100|240|480)G|KINGSTON SH10[03]S3(90|120|240|480)G|KINGSTON SKC(300S37A|380S3)(60|120|180|240|480)G|KINGSTON SVP200S3(7A)?(60|90|120|240|480)G|KINGSTON SMS200S3(30|60|120)G|KINGSTON SMS450S3(32|64|128)G|KINGSTON (SV300|SKC100|SE100)S3.*G|MKNSSDCR(45|60|90|120|180|240|360|480)GB(-(7|DX7?|MX|G2))?|MKNSSDEC(60|120|240|480|512)GB|MKNSSDAT(30|40|60|120|180|240|480)GB(-(DX|V))?|Mushkin MKNSSDCL(40|60|80|90|115|120|180|240|480)GB-DX2?|OCZ[ -](AGILITY2([ -]EX)?|COLOSSUS2|ONYX2|VERTEX(2|-LE))( [123]\..*)?|OCZ-NOCTI|OCZ-REVODRIVE3?( X2)?|OCZ-REVODRIVE350|OCZ[ -](VELO|VERTEX2[ -](EX|PRO))( [123]\..*)?|D2[CR]STK251...-....|OCZ-(AGILITY3|SOLID3|VERTEX3( MI)?)|OCZ Z-DRIVE R4 [CR]M8[48]|OCZ Z-DRIVE 4500|OCZ-VELO DRIVE|TALOS2|(APOC|DENC|DENEVA|FTNC|GFGC|MANG|MMOC|NIMC|TMSC).*|(DENR|DRSAK|EC188|NIMR|PSIR|TRSAK).*|OWC Aura Pro( 6G SSD)?|OWC Mercury Electra (Pro )?[36]G SSD|OWC Mercury E(xtreme|XTREME) Pro (6G |RE )?SSD|Patriot Pyro|SanDisk SDSSDX(60|120|240|480)GG25|SanDisk SDSSDA(120|240|480)G|SuperSSpeed S301 [0-9]*GB|SG9XCS2D(0?50|100|200|400)GESLT|SSD9SC(120|240|480)GED[EA]|(TX32|TX31C1|VN0.?..GCNMK).*|(TX22D1|TX21B1).*|TX52D1.*|TS(64|128|256|512)GSSD[37]20|UGB(88P|99S)GC...H[BF].|SG9XCS(1F|2D)(50|100|200|400)GE01|VisionTek GoDrive (60|120|240|480)GB
+FIRMWARE REGEXP:    .*
+MODEL FAMILY:       SandForce Driven SSDs
+ATTRIBUTE OPTIONS:  001 Raw_Read_Error_Rate
+                    005 Retired_Block_Count
+                    009 Power_On_Hours_and_Msec
+                    013 Soft_Read_Error_Rate
+                    100 Gigabytes_Erased
+                    162 Unknown_SandForce_Attr
+                    170 Reserve_Block_Count
+                    171 Program_Fail_Count
+                    172 Erase_Fail_Count
+                    173 Unknown_SandForce_Attr
+                    174 Unexpect_Power_Loss_Ct
+                    177 Wear_Range_Delta
+                    181 Program_Fail_Count
+                    182 Erase_Fail_Count
+                    184 IO_Error_Detect_Code_Ct
+                    189 Airflow_Temperature_Cel
+                    195 ECC_Uncorr_Error_Count
+                    198 Uncorrectable_Sector_Ct
+                    199 SATA_CRC_Error_Count
+                    201 Unc_Soft_Read_Err_Rate
+                    204 Soft_ECC_Correct_Rate
+                    218 Unknown_SandForce_Attr
+                    230 Life_Curve_Status
+                    231 SSD_Life_Left
+                    233 SandForce_Internal
+                    234 SandForce_Internal
+                    235 SuperCap_Health
+                    241 Lifetime_Writes_GiB
+                    242 Lifetime_Reads_GiB

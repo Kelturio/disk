@@ -1,0 +1,2 @@
+NAME MOUNTPOINT UUID FSTYPE  SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN TRAN LABEL MODEL            SERIAL
+sdb                         55,9G    512     512     512    1 disk     usb        2115             11246518000007430954
