@@ -1,0 +1,3 @@
+NAME MOUNTPOINT                UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL     MODEL            SERIAL
+sdc                                                                        465,8G    512     512     512    1 disk 0x50024e9201f03b6b usb            2115             S1VZJ90Z267756
+sdc1 /media/searinox/Sicherung 8E20283A20282C21                     ntfs   410,8G    512     512     512    1 part 0x50024e9201f03b6b      Sicherung                  

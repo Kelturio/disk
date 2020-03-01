@@ -1,0 +1,2 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdc1       411G  301G  111G  74% /media/searinox/Sicherung
