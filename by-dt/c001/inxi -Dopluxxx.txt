@@ -1,0 +1,1 @@
+           ID-3: /dev/sdb type: USB vendor: Samsung model: HD300LJ size: 279.46 GiB serial: S0D7J1FL605006 
