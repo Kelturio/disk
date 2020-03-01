@@ -1,0 +1,9 @@
+           ID-3: /dev/sdb type: USB vendor: SK Hynix model: SC210 2.5 7MM 256GB size: 238.47 GiB serial: EJ55N76521180641L 
+           ID-3: /media/searinox/237GB size: 237.57 GiB used: 156.61 GiB (65.9%) fs: ntfs dev: /dev/sdb4 label: 237GB 
+           uuid: E2CA35EFCA35C099 
+           ID-4: /media/searinox/C6B6-D895 size: 496.0 MiB used: 25.6 MiB (5.2%) fs: vfat dev: /dev/sdb2 label: N/A 
+           uuid: C6B6-D895 
+           ID-5: /media/searinox/Windows size: 300.0 MiB used: 20.8 MiB (6.9%) fs: ntfs dev: /dev/sdb1 label: Windows 
+           uuid: 586EB4EF6EB4C752 
+--
+           ID-2: /dev/sdb3 size: 128.0 MiB fs: <root required> label: N/A uuid: N/A 

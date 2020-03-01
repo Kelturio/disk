@@ -1,0 +1,4 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb1       300M   21M  280M   7% /media/searinox/Windows
+/dev/sdb2       496M   26M  471M   6% /media/searinox/C6B6-D895
+/dev/sdb4       238G  157G   81G  66% /media/searinox/237GB
