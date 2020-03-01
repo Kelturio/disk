@@ -10,3 +10,5 @@ by-dt/*/tree -*.json
 by-dt/*/ebay/
 
 *.scn
+
+by-id/
