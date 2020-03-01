@@ -1,0 +1,20 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb1       2,4G  2,3G   63M  98% /media/searinox/24FB0DDAF0765697
+/dev/sdb10      3,3G  2,9G  347M  90% /media/searinox/DATEN1
+/dev/sdb11       49G   48G  887M  99% /media/searinox/12D3633756649DFB
+/dev/sdb12       18G   16G  2,1G  89% /media/searinox/Festplatte1
+/dev/sdb13       43G   42G  386M 100% /media/searinox/interne Festplatte 50 GB
+/dev/sdb14      3,6G  3,5G   52M  99% /media/searinox/interne Festplatte 25 GB Volume
+/dev/sdb15       17G   16G  133M 100% /media/searinox/D0D35DDBB93E5B7E
+/dev/sdb16       85G   84G  1,1G  99% /media/searinox/953CE78156CEA5B8
+/dev/sdb17       12G   12G  153M  99% /media/searinox/SYSTEM1
+/dev/sdb18      7,1G  6,9G  186M  98% /media/searinox/Image
+/dev/sdb19       47G   46G  943M  98% /media/searinox/Franziska
+/dev/sdb20      9,1G  8,7G  343M  97% /media/searinox/SYSTEM
+/dev/sdb21      6,7G  6,5G  182M  98% /media/searinox/DATEN
+/dev/sdb22       38G   38G  223M 100% /media/searinox/System
+/dev/sdb5        65G   65G  8,0K 100% /media/searinox/Samsung SP1614N
+/dev/sdb6        15G   13G  2,1G  86% /media/searinox/99AC5AD568B2901B
+/dev/sdb7        21G   21G     0 100% /media/searinox/HD2-Musik(40GB)
+/dev/sdb8        11G   10G   16M 100% /media/searinox/8CD0C313C7CAB30C
+/dev/sdb9       6,3G  6,2G   52M 100% /media/searinox/04F36D8ECD735249

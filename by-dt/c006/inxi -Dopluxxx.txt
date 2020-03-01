@@ -1,0 +1,41 @@
+           ID-3: /dev/sdb type: USB vendor: Samsung model: HD501LJ size: 465.76 GiB serial: S0Z4J1FP907224 scheme: MBR 
+           ID-3: /media/searinox/04F36D8ECD735249 size: 6.20 GiB used: 6.15 GiB (99.2%) fs: ntfs dev: /dev/sdb9 label: N/A 
+           uuid: 04F36D8ECD735249 
+           ID-4: /media/searinox/12D3633756649DFB size: 48.18 GiB used: 47.32 GiB (98.2%) fs: ntfs dev: /dev/sdb11 label: N/A 
+           uuid: 12D3633756649DFB 
+           ID-5: /media/searinox/24FB0DDAF0765697 size: 2.34 GiB used: 2.28 GiB (97.4%) fs: ntfs dev: /dev/sdb1 label: N/A 
+           uuid: 24FB0DDAF0765697 
+           ID-6: /media/searinox/8CD0C313C7CAB30C size: 10.00 GiB used: 9.99 GiB (99.8%) fs: ntfs dev: /dev/sdb8 label: N/A 
+           uuid: 8CD0C313C7CAB30C 
+           ID-7: /media/searinox/953CE78156CEA5B8 size: 85.00 GiB used: 83.99 GiB (98.8%) fs: ntfs dev: /dev/sdb16 label: N/A 
+           uuid: 953CE78156CEA5B8 
+           ID-8: /media/searinox/99AC5AD568B2901B size: 14.29 GiB used: 12.20 GiB (85.4%) fs: ntfs dev: /dev/sdb6 label: N/A 
+           uuid: 99AC5AD568B2901B 
+           ID-9: /media/searinox/D0D35DDBB93E5B7E size: 16.00 GiB used: 15.87 GiB (99.2%) fs: ntfs dev: /dev/sdb15 label: N/A 
+           uuid: D0D35DDBB93E5B7E 
+           ID-10: /media/searinox/DATEN size: 6.66 GiB used: 6.49 GiB (97.3%) fs: ntfs dev: /dev/sdb21 label: DATEN 
+           uuid: 2D083374340F9A36 
+           ID-11: /media/searinox/DATEN1 size: 3.20 GiB used: 2.86 GiB (89.4%) fs: ntfs dev: /dev/sdb10 label: DATEN 
+           uuid: 3A0ADE54A4AD8692 
+           ID-12: /media/searinox/Festplatte1 size: 17.80 GiB used: 15.73 GiB (88.4%) fs: ntfs dev: /dev/sdb12 
+           label: Festplatte1 uuid: 3E73153BDE5F3B4B 
+           ID-13: /media/searinox/Franziska size: 46.00 GiB used: 45.08 GiB (98.0%) fs: ntfs dev: /dev/sdb19 label: Franziska 
+           uuid: 406D7C334ADEC710 
+           ID-14: /media/searinox/HD2-Musik(40GB) size: 20.90 GiB used: 20.90 GiB (100.0%) fs: ntfs dev: /dev/sdb7 
+           label: HD2-Musik(40GB) uuid: 7C3D87D3A345547E 
+           ID-15: /media/searinox/Image size: 7.00 GiB used: 6.82 GiB (97.4%) fs: ntfs dev: /dev/sdb18 label: Image 
+           uuid: 122E2AE0D35F86D6 
+           ID-16: /media/searinox/SYSTEM size: 9.00 GiB used: 8.67 GiB (96.3%) fs: ntfs dev: /dev/sdb20 label: SYSTEM 
+           uuid: 03B3AB1F5B78764D 
+           ID-17: /media/searinox/SYSTEM1 size: 11.23 GiB used: 11.08 GiB (98.7%) fs: ntfs dev: /dev/sdb17 label: SYSTEM 
+           uuid: 21192AE75FEF1465 
+           ID-18: /media/searinox/Samsung SP1614N size: 64.40 GiB used: 64.40 GiB (100.0%) fs: ntfs dev: /dev/sdb5 
+           label: Samsung SP1614N uuid: C77688F52CEADCAC 
+           ID-19: /media/searinox/System size: 37.70 GiB used: 37.48 GiB (99.4%) fs: ntfs dev: /dev/sdb22 label: System 
+           uuid: 82B28D09C98FA065 
+--
+           dev: /dev/sdb14 label: interne Festplatte 25 GB Volume uuid: E212113ABCA4C65B 
+           ID-21: /media/searinox/interne Festplatte 50 GB size: 42.00 GiB used: 41.63 GiB (99.1%) fs: ntfs dev: /dev/sdb13 
+           label: interne Festplatte 50 GB uuid: 503BE463FAB341E3 
+--
+           ID-2: /dev/sdb2 size: 1 KiB fs: <root required> label: N/A uuid: N/A 
