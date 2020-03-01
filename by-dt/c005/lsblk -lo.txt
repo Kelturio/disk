@@ -1,0 +1,5 @@
+NAME MOUNTPOINT              UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL   MODEL            SERIAL
+sdb                                                                      931,5G    512     512     512    1 disk 0x5000cca37cc3d2bf usb          2115             MSE5215V08DRKU
+sdb1 /media/searinox/SYSTEM  B8B280D9B2809E0E                     ntfs       1G    512     512     512    1 part 0x5000cca37cc3d2bf      SYSTEM                   
+sdb2 /media/searinox/Windows C6B06CE4B06CDC85                     ntfs   293,6G    512     512     512    1 part 0x5000cca37cc3d2bf      Windows                  
+sdb3 /media/searinox/Privat  486A95336A951EAE                     ntfs   112,7G    512     512     512    1 part 0x5000cca37cc3d2bf      Privat                   

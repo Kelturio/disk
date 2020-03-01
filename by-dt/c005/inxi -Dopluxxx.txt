@@ -1,0 +1,7 @@
+           ID-3: /dev/sdb type: USB vendor: Hitachi model: HDS721010DLE630 size: 931.51 GiB rotation: 7200 rpm 
+           ID-3: /media/searinox/Privat size: 112.68 GiB used: 36.24 GiB (32.2%) fs: ntfs dev: /dev/sdb3 label: Privat 
+           uuid: 486A95336A951EAE 
+           ID-4: /media/searinox/SYSTEM size: 1.00 GiB used: 557.5 MiB (54.4%) fs: ntfs dev: /dev/sdb1 label: SYSTEM 
+           uuid: B8B280D9B2809E0E 
+           ID-5: /media/searinox/Windows size: 293.59 GiB used: 168.89 GiB (57.5%) fs: ntfs dev: /dev/sdb2 label: Windows 
+           uuid: C6B06CE4B06CDC85 
