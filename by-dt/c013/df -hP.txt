@@ -1,0 +1,6 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdc1        24G   23G  421M  99% /media/searinox/SYSTEM
+/dev/sdc3        74G   69G  4,5G  94% /media/searinox/STORMS
+/dev/sdc5       161G  160G  578M 100% /media/searinox/WDC WD10EAVS-00D7B0
+/dev/sdc6        17G  755M   16G   5% /media/searinox/82E883BEE883AECB
+/dev/sdc7       659G  659G  269M 100% /media/searinox/DDL-Warez

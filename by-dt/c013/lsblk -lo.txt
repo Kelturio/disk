@@ -1,0 +1,8 @@
+NAME MOUNTPOINT                          UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL               MODEL            SERIAL
+sdc                                                                                  931,5G    512     512     512    1 disk 0x50014ee2ac83f348 usb                      2115             WD-WCAU41582391
+sdc1 /media/searinox/SYSTEM              DCA4197EA4195C78                     ntfs      23G    512     512     512    1 part 0x50014ee2ac83f348      SYSTEM                               
+sdc2                                                                                     1K    512     512     512    1 part 0x50014ee2ac83f348                                           
+sdc3 /media/searinox/STORMS              82DB8EDCDF4D9576                     ntfs      73G    512     512     512    1 part 0x50014ee2ac83f348      STORMS                               
+sdc5 /media/searinox/WDC WD10EAVS-00D7B0 8AE0E16D2E57137E                     ntfs     160G    512     512     512    1 part 0x50014ee2ac83f348      WDC WD10EAVS-00D7B0                  
+sdc6 /media/searinox/82E883BEE883AECB    82E883BEE883AECB                     ntfs    16,3G    512     512     512    1 part 0x50014ee2ac83f348                                           
+sdc7 /media/searinox/DDL-Warez           4590946243562942                     ntfs   658,5G    512     512     512    1 part 0x50014ee2ac83f348      DDL-Warez                            

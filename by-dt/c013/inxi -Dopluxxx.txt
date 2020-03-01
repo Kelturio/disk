@@ -1,0 +1,15 @@
+           ID-4: /dev/sdc type: USB vendor: Western Digital model: WD10EAVS-00D7B0 size: 931.51 GiB serial: WD-WCAU41582391 
+           ID-3: /media/searinox/82E883BEE883AECB size: 16.29 GiB used: 754.7 MiB (4.5%) fs: ntfs dev: /dev/sdc6 label: N/A 
+           uuid: 82E883BEE883AECB 
+--
+           ID-5: /media/searinox/DDL-Warez size: 658.50 GiB used: 658.24 GiB (100.0%) fs: ntfs dev: /dev/sdc7 label: DDL-Warez 
+           uuid: 4590946243562942 
+--
+           ID-7: /media/searinox/STORMS size: 73.00 GiB used: 68.52 GiB (93.9%) fs: ntfs dev: /dev/sdc3 label: STORMS 
+           uuid: 82DB8EDCDF4D9576 
+           ID-8: /media/searinox/SYSTEM size: 23.00 GiB used: 22.59 GiB (98.2%) fs: ntfs dev: /dev/sdc1 label: SYSTEM 
+           uuid: DCA4197EA4195C78 
+           ID-9: /media/searinox/WDC WD10EAVS-00D7B0 size: 160.00 GiB used: 159.44 GiB (99.6%) fs: ntfs dev: /dev/sdc5 
+           label: WDC WD10EAVS-00D7B0 uuid: 8AE0E16D2E57137E 
+--
+           ID-2: /dev/sdc2 size: 1 KiB fs: <root required> label: N/A uuid: N/A 
