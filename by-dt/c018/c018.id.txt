@@ -1,0 +1,7 @@
+c018
+ata-Maxtor_6V080E0_V22TQT7G
+ata-Maxtor_6V080E0_V22TQT7G-part1
+de8bde8b-01
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0-part1
+C240866540865FD1

@@ -1,0 +1,3 @@
+NAME MOUNTPOINT                       UUID                                 FSTYPE  SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN TRAN LABEL MODEL            SERIAL
+sdb                                                                               74,5G    512     512     512    1 disk     usb        2115             V22TQT7G
+sdb1 /media/searinox/C240866540865FD1 C240866540865FD1                     ntfs   74,5G    512     512     512    1 part                                 

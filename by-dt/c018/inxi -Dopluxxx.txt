@@ -1,0 +1,3 @@
+           ID-3: /dev/sdb type: USB vendor: Maxtor model: 6V080E0 size: 74.53 GiB serial: V22TQT7G scheme: MBR 
+           ID-3: /media/searinox/C240866540865FD1 size: 74.52 GiB used: 54.87 GiB (73.6%) fs: ntfs dev: /dev/sdb1 label: N/A 
+           uuid: C240866540865FD1 

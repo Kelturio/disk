@@ -1,0 +1,61 @@
+
+/dev/sdb:
+
+ATA device, with non-removable media
+	Model Number:       Maxtor 6V080E0                          
+	Serial Number:      V22TQT7G            
+	Firmware Revision:  VA111680
+Standards:
+	Used: ATA/ATAPI-7 T13 1532D revision 0 
+	Supported: 7 6 5 4 & some of 8
+Configuration:
+	Logical		max	current
+	cylinders	16383	16383
+	heads		16	16
+	sectors/track	63	63
+	--
+	CHS current addressable sectors:    16514064
+	LBA    user addressable sectors:   156301488
+	LBA48  user addressable sectors:   156301488
+	Logical/Physical Sector size:           512 bytes
+	device size with M = 1024*1024:       76319 MBytes
+	device size with M = 1000*1000:       80026 MBytes (80 GB)
+	cache/buffer size  = 8192 KBytes (type=DualPortCache)
+Capabilities:
+	LBA, IORDY(can be disabled)
+	Standby timer values: spec'd by Standard, no device specific minimum
+	R/W multiple sector transfer: Max = 16	Current = 0
+	Advanced power management level: disabled
+	DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 *udma5 
+	     Cycle time: min=120ns recommended=120ns
+	PIO: pio0 pio1 pio2 pio3 pio4 
+	     Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+	Enabled	Supported:
+	   *	SMART feature set
+	   *	Power Management feature set
+	   *	Write cache
+	   *	Look-ahead
+	   *	WRITE_VERIFY command
+	   *	WRITE_BUFFER command
+	   *	READ_BUFFER command
+	   *	NOP cmd
+	   *	DOWNLOAD_MICROCODE
+	    	Advanced Power Management feature set
+	    	Power-Up In Standby feature set
+	    	SET_FEATURES required to spinup after power up
+	    	SET_MAX security extension
+	   *	48-bit Address feature set
+	   *	Device Configuration Overlay feature set
+	   *	Mandatory FLUSH_CACHE
+	   *	FLUSH_CACHE_EXT
+	   *	SMART error logging
+	   *	SMART self-test
+	   *	General Purpose Logging feature set
+	   *	Gen1 signaling speed (1.5Gb/s)
+	   *	Gen2 signaling speed (3.0Gb/s)
+	   *	Host-initiated interface power management
+	   *	Software settings preservation
+	   *	SMART Command Transport (SCT) feature set
+	   *	SCT Data Tables (AC5)
+Checksum: correct
