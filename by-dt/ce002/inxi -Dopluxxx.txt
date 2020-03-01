@@ -1,0 +1,3 @@
+           ID-4: /dev/sdc type: USB vendor: HGST (Hitachi) model: HTS721075A9E630 size: 698.64 GiB rotation: 7200 rpm 
+           ID-5: /media/searinox/Sicherung size: 508.46 GiB used: 248.12 GiB (48.8%) fs: ntfs dev: /dev/sdc1 label: Sicherung 
+           uuid: 8E20283A20282C21 
