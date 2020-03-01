@@ -1,0 +1,6 @@
+NAME MOUNTPOINT                UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL     MODEL            SERIAL
+sdb                                                                        931,5G    512     512     512    1 disk 0x5000cca349c06ab9 usb            2115             STF601MH00XEAB
+sdb1                                                                           1K    512     512     512    1 part 0x5000cca349c06ab9                                 
+sdb4 /media/searinox/PETRI_NEU E3BF51090F32F861                     ntfs      13G    512     512     512    1 part 0x5000cca349c06ab9      PETRI_NEU                  
+sdb5 /media/searinox/core931   E0B44BB47218F17C                     ntfs   876,5G    512     512     512    1 part 0x5000cca349c06ab9      core931                    
+sdb6 /media/searinox/BTC       6EBA3818BA37DB73                     ntfs      42G    512     512     512    1 part 0x5000cca349c06ab9      BTC                        

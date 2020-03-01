@@ -1,0 +1,9 @@
+           ID-3: /dev/sdb type: USB vendor: Hitachi model: HDT721010SLA360 size: 931.51 GiB rotation: 7200 rpm 
+           ID-3: /media/searinox/BTC size: 42.00 GiB used: 31.94 GiB (76.1%) fs: ntfs dev: /dev/sdb6 label: BTC 
+           uuid: 6EBA3818BA37DB73 
+           ID-4: /media/searinox/PETRI_NEU size: 13.01 GiB used: 11.50 GiB (88.4%) fs: ntfs dev: /dev/sdb4 label: PETRI_NEU 
+           uuid: E3BF51090F32F861 
+           ID-5: /media/searinox/core931 size: 876.49 GiB used: 851.57 GiB (97.2%) fs: ntfs dev: /dev/sdb5 label: core931 
+           uuid: E0B44BB47218F17C 
+--
+           ID-2: /dev/sdb1 size: 1 KiB fs: <root required> label: N/A uuid: N/A 

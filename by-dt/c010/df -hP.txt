@@ -1,0 +1,4 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb4        14G   12G  1,6G  89% /media/searinox/PETRI_NEU
+/dev/sdb5       877G  852G   25G  98% /media/searinox/core931
+/dev/sdb6        43G   32G   11G  77% /media/searinox/BTC
