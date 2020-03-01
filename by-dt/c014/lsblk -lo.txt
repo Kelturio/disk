@@ -1,0 +1,17 @@
+NAME  MOUNTPOINT                          UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN TRAN LABEL               MODEL            SERIAL
+sdc                                                                                    74,5G    512     512     512    1 disk     usb                      2115             9RW3YTML
+sdc1  /media/searinox/9FC4EBC1FF12C52C    9FC4EBC1FF12C52C                     ntfs     8,4G    512     512     512    1 part                                               
+sdc2                                                                                      1K    512     512     512    1 part                                               
+sdc5  /media/searinox/Technisat 3         D49675A3DE5F39DE                     ntfs   203,9M    512     512     512    1 part          Technisat 3                          
+sdc6  /media/searinox/4046-7FD3           4046-7FD3                            vfat   305,9M    512     512     512    1 part                                               
+sdc7  /media/searinox/8885-B63F           8885-B63F                            vfat   800,1M    512     512     512    1 part                                               
+sdc8  /media/searinox/SICHERUNG1          EA35-6D7E                            vfat     1,9G    512     512     512    1 part          SICHERUNG                            
+sdc9  /media/searinox/System              9E9E25B5E3AA8413                     ntfs     2,1G    512     512     512    1 part          System                               
+sdc10 /media/searinox/Datenträger1        61F0100FC8435A05                     ntfs     2,4G    512     512     512    1 part          Datenträger                          
+sdc11 /media/searinox/Lokaler Datenträger FF385AA19B1F46D9                     ntfs     2,5G    512     512     512    1 part          Lokaler Datenträger                  
+sdc12 /media/searinox/D30F903F5FD139B1    D30F903F5FD139B1                     ntfs     2,7G    512     512     512    1 part                                               
+sdc13 /media/searinox/Festplatte2         781ECE517C6D89C7                     ntfs     2,7G    512     512     512    1 part          Festplatte2                          
+sdc14 /media/searinox/PENNER              86DFBB0F1E8A32ED                     ntfs     2,8G    512     512     512    1 part          PENNER                               
+sdc15 /media/searinox/Datenträger         4C3B67868E28CDB1                     ntfs     3,1G    512     512     512    1 part          Datenträger                          
+sdc16 /media/searinox/SICHERUNG           31B4-9BA0                            vfat     3,6G    512     512     512    1 part          SICHERUNG                            
+sdc17 /media/searinox/C1AABF6CC3CC60F2    C1AABF6CC3CC60F2                     ntfs    11,4G    512     512     512    1 part                                               

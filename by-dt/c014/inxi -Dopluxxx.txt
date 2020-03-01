@@ -1,0 +1,39 @@
+           ID-4: /dev/sdc type: USB vendor: Seagate model: ST380815AS size: 74.51 GiB serial: 9RW3YTML scheme: MBR 
+           ID-4: /media/searinox/4046-7FD3 size: 305.3 MiB used: 232.4 MiB (76.1%) fs: vfat dev: /dev/sdc6 label: N/A 
+           uuid: 4046-7FD3 
+--
+           ID-6: /media/searinox/8885-B63F size: 798.5 MiB used: 774.7 MiB (97.0%) fs: vfat dev: /dev/sdc7 label: N/A 
+           uuid: 8885-B63F 
+           ID-7: /media/searinox/9FC4EBC1FF12C52C size: 8.40 GiB used: 8.40 GiB (100.0%) fs: ntfs dev: /dev/sdc1 label: N/A 
+           uuid: 9FC4EBC1FF12C52C 
+           ID-8: /media/searinox/C1AABF6CC3CC60F2 size: 11.40 GiB used: 11.28 GiB (98.9%) fs: ntfs dev: /dev/sdc17 label: N/A 
+           uuid: C1AABF6CC3CC60F2 
+           ID-9: /media/searinox/D30F903F5FD139B1 size: 2.70 GiB used: 2.63 GiB (97.4%) fs: ntfs dev: /dev/sdc12 label: N/A 
+           uuid: D30F903F5FD139B1 
+--
+           dev: /dev/sdc15 label: Datentr\xc3\xa4ger uuid: 4C3B67868E28CDB1 
+           ID-11: /media/searinox/Datentr\xc3\xa4ger1 raw size: 2.41 GiB size: <root required> used: <root required> fs: ntfs 
+           dev: /dev/sdc10 label: Datentr\xc3\xa4ger uuid: 61F0100FC8435A05 
+           ID-12: /media/searinox/Datenträger size: 3.10 GiB used: 3.09 GiB (99.7%) fs: ntfs dev: /dev/sdc15 
+           label: Datentr\xc3\xa4ger uuid: 4C3B67868E28CDB1 
+           ID-13: /media/searinox/Datenträger1 size: 2.41 GiB used: 2.34 GiB (97.2%) fs: ntfs dev: /dev/sdc10 
+           label: Datentr\xc3\xa4ger uuid: 61F0100FC8435A05 
+           ID-14: /media/searinox/Festplatte2 size: 2.70 GiB used: 2.68 GiB (99.2%) fs: ntfs dev: /dev/sdc13 
+           label: Festplatte2 uuid: 781ECE517C6D89C7 
+--
+           fs: ntfs dev: /dev/sdc11 label: Lokaler Datentr\xc3\xa4ger uuid: FF385AA19B1F46D9 
+           ID-16: /media/searinox/Lokaler Datenträger size: 2.50 GiB used: 2.45 GiB (97.9%) fs: ntfs dev: /dev/sdc11 
+           label: Lokaler Datentr\xc3\xa4ger uuid: FF385AA19B1F46D9 
+           ID-17: /media/searinox/PENNER size: 2.80 GiB used: 2.47 GiB (88.0%) fs: ntfs dev: /dev/sdc14 label: PENNER 
+           uuid: 86DFBB0F1E8A32ED 
+           ID-18: /media/searinox/SICHERUNG size: 3.59 GiB used: 3.52 GiB (98.0%) fs: vfat dev: /dev/sdc16 label: SICHERUNG 
+           uuid: 31B4-9BA0 
+           ID-19: /media/searinox/SICHERUNG1 size: 1.90 GiB used: 1.80 GiB (95.1%) fs: vfat dev: /dev/sdc8 label: SICHERUNG 
+           uuid: EA35-6D7E 
+           ID-20: /media/searinox/System size: 2.11 GiB used: 2.09 GiB (99.2%) fs: ntfs dev: /dev/sdc9 label: System 
+           uuid: 9E9E25B5E3AA8413 
+--
+           ID-22: /media/searinox/Technisat 3 size: 203.9 MiB used: 152.9 MiB (75.0%) fs: ntfs dev: /dev/sdc5 
+           label: Technisat 3 uuid: D49675A3DE5F39DE 
+--
+           ID-2: /dev/sdc2 size: 1 KiB fs: <root required> label: N/A uuid: N/A 

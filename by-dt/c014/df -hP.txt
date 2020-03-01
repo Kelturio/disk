@@ -1,0 +1,15 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdc1       8,5G  8,5G  4,0K 100% /media/searinox/9FC4EBC1FF12C52C
+/dev/sdc10      2,5G  2,4G   70M  98% /media/searinox/Datenträger1
+/dev/sdc11      2,6G  2,5G   53M  98% /media/searinox/Lokaler Datenträger
+/dev/sdc12      2,8G  2,7G   72M  98% /media/searinox/D30F903F5FD139B1
+/dev/sdc13      2,8G  2,7G   22M 100% /media/searinox/Festplatte2
+/dev/sdc14      2,9G  2,5G  346M  88% /media/searinox/PENNER
+/dev/sdc15      3,2G  3,1G   11M 100% /media/searinox/Datenträger
+/dev/sdc16      3,6G  3,6G   74M  99% /media/searinox/SICHERUNG
+/dev/sdc17       12G   12G  125M  99% /media/searinox/C1AABF6CC3CC60F2
+/dev/sdc5       204M  153M   51M  76% /media/searinox/Technisat 3
+/dev/sdc6       306M  233M   73M  77% /media/searinox/4046-7FD3
+/dev/sdc7       799M  775M   24M  98% /media/searinox/8885-B63F
+/dev/sdc8       1,9G  1,9G   96M  96% /media/searinox/SICHERUNG1
+/dev/sdc9       2,2G  2,1G   18M 100% /media/searinox/System
