@@ -1,0 +1,2 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdc1       466G  459G  7,0G  99% /media/searinox/465G

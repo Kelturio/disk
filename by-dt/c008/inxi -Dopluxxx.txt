@@ -1,0 +1,3 @@
+           ID-4: /dev/sdc type: USB vendor: Western Digital model: WD5000AAKX-001CA0 size: 465.76 GiB serial: WD-WCAYUS005843 
+           ID-3: /media/searinox/465G size: 465.76 GiB used: 458.80 GiB (98.5%) fs: ntfs dev: /dev/sdc1 label: 465G 
+           uuid: 961C21361C2112B3 

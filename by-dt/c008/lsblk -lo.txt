@@ -1,0 +1,3 @@
+NAME MOUNTPOINT           UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL MODEL            SERIAL
+sdc                                                                   465,8G    512     512     512    1 disk 0x50014ee205d1082c usb        2115             WD-WCAYUS005843
+sdc1 /media/searinox/465G 961C21361C2112B3                     ntfs   465,8G    512     512     512    1 part 0x50014ee205d1082c      465G                   

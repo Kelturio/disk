@@ -2,3 +2,7 @@
 search_last.txt
 
 .~lock.disk.fods#
+
+by-dt/*/tree -*.txt
+by-dt/*/tree -*.htm
+by-dt/*/tree -*.json
