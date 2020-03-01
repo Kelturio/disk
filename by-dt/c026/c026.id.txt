@@ -1,0 +1,4 @@
+c026
+ata-WDC_WD10EZRX-00A8LB0
+wwn-0x50014ee2b15e8858
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0

@@ -1,0 +1,14 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-40-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Western Digital Green
+Device Model:     WDC WD10EZRX-00A8LB0
+Serial Number:    [No Information Found]
+Firmware Version: [No Information Found]
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   [No Information Found]
+Local Time is:    Sun Mar  1 00:42:21 2020 CET
+SMART support is: Ambiguous - ATA IDENTIFY DEVICE words 82-83 don't show if SMART supported.
+SMART support is: Ambiguous - ATA IDENTIFY DEVICE words 85-87 don't show if SMART is enabled.
+A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.

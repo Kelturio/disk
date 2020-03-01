@@ -1,0 +1,28 @@
+
+/dev/sdb:
+
+ATA device, with non-removable media
+	Model Number:       WDC WD10EZRX-00A8LB0                    
+Standards:
+	Likely used: 5
+Configuration:
+	Logical		max	current
+	cylinders	0	0
+	heads		0	0
+	sectors/track	0	0
+	--
+	Logical/Physical Sector size:           512 bytes
+	device size with M = 1024*1024:           0 MBytes
+	device size with M = 1000*1000:           0 MBytes 
+	cache/buffer size  = unknown
+Capabilities:
+	IORDY(may be)(cannot be disabled)
+	Standby timer values: spec'd by Vendor
+	R/W multiple sector transfer: Max = 0	Current = ?
+	DMA: not supported
+	PIO: pio0 
+Logical Unit WWN Device Identifier: 50014ee2b15e8858
+	NAA		: 5
+	IEEE OUI	: 0014ee
+	Unique ID	: 2b15e8858
+Checksum: correct
