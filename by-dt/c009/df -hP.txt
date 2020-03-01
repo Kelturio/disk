@@ -1,0 +1,4 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb1       100M   27M   74M  27% /media/searinox/System-reserviert
+/dev/sdb2        33G   25G  7,8G  77% /media/searinox/SYSTEM
+/dev/sdb3       494G  396G   98G  81% /media/searinox/DATA

@@ -1,0 +1,7 @@
+           ID-3: /dev/sdb type: USB vendor: Toshiba model: DT01ACA100 size: 931.51 GiB rotation: 7200 rpm serial: Y2IMXX1PS 
+           ID-3: /media/searinox/DATA size: 493.65 GiB used: 395.93 GiB (80.2%) fs: ntfs dev: /dev/sdb3 label: DATA 
+           uuid: 24A2F68CA2F6622A 
+           ID-4: /media/searinox/SYSTEM size: 32.45 GiB used: 24.71 GiB (76.1%) fs: ntfs dev: /dev/sdb2 label: SYSTEM 
+           uuid: 5874F98174F96264 
+           ID-5: /media/searinox/System-reserviert size: 100.0 MiB used: 26.9 MiB (26.9%) fs: ntfs dev: /dev/sdb1 
+           label: System-reserviert uuid: F278F2AF78F27229 

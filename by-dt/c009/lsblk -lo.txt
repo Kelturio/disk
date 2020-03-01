@@ -1,0 +1,5 @@
+NAME MOUNTPOINT                        UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL             MODEL            SERIAL
+sdb                                                                                931,5G    512     512     512    1 disk 0x5000039ff2c90f8e usb                    2115             Y2IMXX1PS
+sdb1 /media/searinox/System-reserviert F278F2AF78F27229                     ntfs     100M    512     512     512    1 part 0x5000039ff2c90f8e      System-reserviert                  
+sdb2 /media/searinox/SYSTEM            5874F98174F96264                     ntfs    32,5G    512     512     512    1 part 0x5000039ff2c90f8e      SYSTEM                             
+sdb3 /media/searinox/DATA              24A2F68CA2F6622A                     ntfs   493,7G    512     512     512    1 part 0x5000039ff2c90f8e      DATA                               
