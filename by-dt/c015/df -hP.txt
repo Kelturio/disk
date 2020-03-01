@@ -1,0 +1,2 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb1        75G   16G   60G  21% /media/searinox/725C8C555C8C164F

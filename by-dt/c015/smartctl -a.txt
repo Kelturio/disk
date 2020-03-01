@@ -1,0 +1,112 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-40-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Western Digital Caviar SE Serial ATA
+Device Model:     WDC WD800JD-55MUA1
+Serial Number:    WD-WMAMD6021658
+Firmware Version: 10.01E01
+User Capacity:    80.026.361.856 bytes [80,0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
+Local Time is:    Thu Feb 27 23:26:23 2020 CET
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+See vendor-specific Attribute list for marginal Attributes.
+
+General SMART Values:
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 2460) seconds.
+Offline data collection
+capabilities: 			 (0x7b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  33) minutes.
+Conveyance self-test routine
+recommended polling time: 	 (   6) minutes.
+SCT capabilities: 	       (0x103f)	SCT Status supported.
+					SCT Error Recovery Control supported.
+					SCT Feature Control supported.
+					SCT Data Table supported.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE
+  1 Raw_Read_Error_Rate     0x000f   200   200   051    Pre-fail  Always       -       0
+  3 Spin_Up_Time            0x0003   167   166   021    Pre-fail  Always       -       2616
+  4 Start_Stop_Count        0x0032   095   095   000    Old_age   Always       -       5091
+  5 Reallocated_Sector_Ct   0x0033   200   200   140    Pre-fail  Always       -       0
+  7 Seek_Error_Rate         0x000f   200   200   051    Pre-fail  Always       -       0
+  9 Power_On_Hours          0x0032   066   066   000    Old_age   Always       -       24845
+ 10 Spin_Retry_Count        0x0013   100   100   051    Pre-fail  Always       -       0
+ 11 Calibration_Retry_Count 0x0012   100   100   051    Old_age   Always       -       0
+ 12 Power_Cycle_Count       0x0032   100   100   000    Old_age   Always       -       394
+190 Airflow_Temperature_Cel 0x0022   084   045   045    Old_age   Always   In_the_past 16
+194 Temperature_Celsius     0x0022   127   088   000    Old_age   Always       -       16
+196 Reallocated_Event_Count 0x0032   200   200   000    Old_age   Always       -       0
+197 Current_Pending_Sector  0x0012   200   200   000    Old_age   Always       -       0
+198 Offline_Uncorrectable   0x0010   200   200   000    Old_age   Offline      -       0
+199 UDMA_CRC_Error_Count    0x003e   200   200   000    Old_age   Always       -       0
+200 Multi_Zone_Error_Rate   0x0009   200   200   051    Pre-fail  Offline      -       0
+
+SMART Error Log Version: 1
+No Errors Logged
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     22311         -
+# 2  Short offline       Completed without error       00%     21875         -
+# 3  Short offline       Completed without error       00%     21296         -
+# 4  Short offline       Completed without error       00%     20801         -
+# 5  Short offline       Completed without error       00%     20280         -
+# 6  Short offline       Completed without error       00%     19812         -
+# 7  Short offline       Completed without error       00%     19378         -
+# 8  Short offline       Completed without error       00%     18635         -
+# 9  Short offline       Completed without error       00%     18271         -
+#10  Short offline       Completed without error       00%     17728         -
+#11  Short offline       Completed without error       00%     17392         -
+#12  Short offline       Completed without error       00%     16986         -
+#13  Short offline       Completed without error       00%     16636         -
+#14  Short offline       Completed without error       00%     16202         -
+#15  Short offline       Completed without error       00%     15548         -
+#16  Short offline       Completed without error       00%     14823         -
+#17  Short offline       Completed without error       00%     14081         -
+#18  Short offline       Completed without error       00%     13339         -
+#19  Short offline       Completed without error       00%     12596         -
+#20  Short offline       Completed without error       00%     11853         -
+#21  Short offline       Completed without error       00%     11133         -
+
+SMART Selective self-test log data structure revision number 1
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+

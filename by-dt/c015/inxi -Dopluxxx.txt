@@ -1,0 +1,3 @@
+           ID-3: /dev/sdb type: USB vendor: Western Digital model: WD800JD-55MUA1 size: 74.53 GiB serial: WD-WMAMD6021658 
+           ID-4: /media/searinox/725C8C555C8C164F size: 74.53 GiB used: 15.19 GiB (20.4%) fs: ntfs dev: /dev/sdb1 label: N/A 
+           uuid: 725C8C555C8C164F 

@@ -1,0 +1,3 @@
+NAME MOUNTPOINT                       UUID                                 FSTYPE  SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN TRAN LABEL MODEL            SERIAL
+sdb                                                                               74,5G    512     512     512    1 disk     usb        2115             WD-WMAMD6021658
+sdb1 /media/searinox/725C8C555C8C164F 725C8C555C8C164F                     ntfs   74,5G    512     512     512    1 part                                 
