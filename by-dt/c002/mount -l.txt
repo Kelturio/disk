@@ -1,0 +1,1 @@
+/dev/sdb1 on /media/searinox/63157E998B114BD4 type fuseblk (rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096,uhelper=udisks2)

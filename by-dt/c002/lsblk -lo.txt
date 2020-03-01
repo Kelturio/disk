@@ -1,0 +1,3 @@
+NAME MOUNTPOINT                       UUID                                 FSTYPE               SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL MODEL            SERIAL
+sdb                                                                        nvidia_raid_member 279,5G    512     512     512    1 disk 0x50000f001bb03919 usb        2115             S0D7J13LB03919
+sdb1 /media/searinox/63157E998B114BD4 63157E998B114BD4                     ntfs                76,7G    512     512     512    1 part 0x50000f001bb03919                             
