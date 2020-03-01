@@ -8,3 +8,5 @@ by-dt/*/tree -*.htm
 by-dt/*/tree -*.json
 
 by-dt/*/ebay/
+
+*.scn

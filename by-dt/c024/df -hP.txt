@@ -1,0 +1,2 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdc1       466G  101M  466G   1% /media/searinox/FESTPLATTE

@@ -1,0 +1,3 @@
+           ID-4: /dev/sdc type: USB vendor: Samsung model: HD501LJ size: 465.76 GiB serial: S1K4J1NQ405160 scheme: GPT 
+           ID-3: /media/searinox/FESTPLATTE size: 465.76 GiB used: 100.6 MiB (0.0%) fs: ntfs dev: /dev/sdc1 label: FESTPLATTE 
+           uuid: EEA0107FA0105107 
