@@ -1,0 +1,2 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb        466G  120G  347G  26% /media/searinox/Adat

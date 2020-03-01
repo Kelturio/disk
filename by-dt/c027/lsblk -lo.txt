@@ -1,0 +1,2 @@
+NAME MOUNTPOINT           UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL MODEL            SERIAL
+sdb  /media/searinox/Adat 104C47234C470348                     ntfs   465,8G    512     512     512    1 disk 0x5000cca357e6def9 usb  Adat  2115             GEC534RJ2SHUTJ

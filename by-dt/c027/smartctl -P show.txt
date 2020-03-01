@@ -1,0 +1,11 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-40-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+Drive found in smartmontools Database.  Drive identity strings:
+MODEL:              Hitachi HDP725050GLA360
+FIRMWARE:           GM4OA5CA
+match smartmontools Drive Database entry:
+MODEL REGEXP:       (Hitachi )?HDP7250(16|25|32|40|50)GLA(36|38|T8)0
+FIRMWARE REGEXP:    .*
+MODEL FAMILY:       Hitachi Deskstar P7K500
+ATTRIBUTE OPTIONS:  None preset; no -v options are required.

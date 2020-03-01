@@ -1,0 +1,3 @@
+           ID-3: /dev/sdb type: USB vendor: Hitachi model: HDP725050GLA360 size: 465.76 GiB rotation: 7200 rpm 
+--
+           ID-3: /media/searinox/Adat size: 465.76 GiB used: 119.76 GiB (25.7%) fs: ntfs dev: /dev/sdb label: Adat 
