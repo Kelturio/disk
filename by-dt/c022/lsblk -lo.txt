@@ -1,0 +1,4 @@
+NAME MOUNTPOINT                      UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL           MODEL            SERIAL
+sdc                                                                              465,8G    512     512     512    1 disk 0x5000c500465ab901 usb                  2115             6VVE41C1
+sdc1 /media/searinox/System Reserved 62DE7A5DDE7A2A05                     ntfs     350M    512     512     512    1 part 0x5000c500465ab901      System Reserved                  
+sdc2 /media/searinox/System          EAB87EEEB87EB921                     ntfs   465,4G    512     512     512    1 part 0x5000c500465ab901      System                           

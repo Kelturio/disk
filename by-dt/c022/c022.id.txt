@@ -1,0 +1,16 @@
+c022
+ata-ST3500312CS_6VVE41C1
+ata-ST3500312CS_6VVE41C1-part1
+ata-ST3500312CS_6VVE41C1-part2
+wwn-0x5000c500465ab901
+wwn-0x5000c500465ab901-part1
+wwn-0x5000c500465ab901-part2
+System
+System\x20Reserved
+0b39d5bc-01
+0b39d5bc-02
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0-part1
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0-part2
+62DE7A5DDE7A2A05
+EAB87EEEB87EB921

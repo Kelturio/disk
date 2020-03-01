@@ -6,3 +6,5 @@ search_last.txt
 by-dt/*/tree -*.txt
 by-dt/*/tree -*.htm
 by-dt/*/tree -*.json
+
+by-dt/*/ebay/

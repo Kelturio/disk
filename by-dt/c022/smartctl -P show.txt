@@ -1,0 +1,11 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-40-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+Drive found in smartmontools Database.  Drive identity strings:
+MODEL:              ST3500312CS
+FIRMWARE:           SS16
+match smartmontools Drive Database entry:
+MODEL REGEXP:       ST3(160316|250[34]12|320(311|413)|500(312|414)|1000(322|424))CS
+FIRMWARE REGEXP:    .*
+MODEL FAMILY:       Seagate Pipeline HD 5900.2
+ATTRIBUTE OPTIONS:  None preset; no -v options are required.
