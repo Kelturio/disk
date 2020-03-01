@@ -1,0 +1,3 @@
+NAME MOUNTPOINT                       UUID                                 FSTYPE  SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN TRAN LABEL MODEL            SERIAL
+sdb                                                                               76,7G    512     512     512    1 disk     usb        2115             PFDB30K2CVCMMB
+sdb1 /media/searinox/FC5CFAD65CFA8B22 FC5CFAD65CFA8B22                     ntfs   76,7G    512     512     512    1 part                                 

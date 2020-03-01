@@ -1,0 +1,3 @@
+           ID-3: /dev/sdb type: USB vendor: ExcelStor model: J880S size: 76.69 GiB serial: PFDB30K2CVCMMB scheme: MBR 
+           ID-3: /media/searinox/FC5CFAD65CFA8B22 size: 76.68 GiB used: 38.86 GiB (50.7%) fs: ntfs dev: /dev/sdb1 label: N/A 
+           uuid: FC5CFAD65CFA8B22 

@@ -1,0 +1,7 @@
+c020
+ata-ExcelStor_Technology_J880S_PFDB30K2CVCMMB
+ata-ExcelStor_Technology_J880S_PFDB30K2CVCMMB-part1
+c375c375-01
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0-part1
+FC5CFAD65CFA8B22
