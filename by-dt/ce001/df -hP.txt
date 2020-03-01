@@ -1,0 +1,3 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdc1       350M  256M   95M  74% /media/searinox/System Reserved
+/dev/sdc2       466G  234G  233G  51% /media/searinox/System
