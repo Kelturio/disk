@@ -1,0 +1,7 @@
+           ID-3: /dev/sdb type: USB vendor: Samsung model: HD300LJ size: 279.46 GiB serial: S0D7J13LB03910 
+           ID-3: /media/searinox/3600458DE8E1510C size: 50.00 GiB used: 44.27 GiB (88.5%) fs: ntfs dev: /dev/sdb3 label: N/A 
+           uuid: 3600458DE8E1510C 
+           ID-4: /media/searinox/4C63554FE256BD7A size: 50.59 GiB used: 38.70 GiB (76.5%) fs: ntfs dev: /dev/sdb1 label: N/A 
+           uuid: 4C63554FE256BD7A 
+           ID-5: /media/searinox/System-reserviert size: 102.0 MiB used: 25.1 MiB (24.6%) fs: ntfs dev: /dev/sdb2 
+           label: System-reserviert uuid: F54E7DB8C9B5A52D 
