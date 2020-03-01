@@ -1,0 +1,11 @@
+           ID-4: /dev/sdc type: USB vendor: Western Digital model: WD10EZEX-22RKKA0 size: 931.51 GiB serial: WD-WCC1S6274413 
+           ID-5: /media/searinox/Recovery image size: 15.52 GiB used: 11.49 GiB (74.0%) fs: ntfs dev: /dev/sdc5 
+           label: Recovery image uuid: E68411268410FB2F 
+           ID-6: /media/searinox/SYSTEM size: 256.0 MiB used: 49.7 MiB (19.4%) fs: vfat dev: /dev/sdc2 label: SYSTEM 
+           uuid: C20B-B883 
+           ID-7: /media/searinox/WD-WCC1S6274413 size: 914.83 GiB used: 911.30 GiB (99.6%) fs: ntfs dev: /dev/sdc4 
+           label: WD-WCC1S6274413 uuid: 76A2E91CA2E8E19B 
+           ID-8: /media/searinox/Windows RE tools size: 800.0 MiB used: 253.0 MiB (31.6%) fs: ntfs dev: /dev/sdc1 
+           label: Windows RE tools uuid: E860095860092F3E 
+--
+           ID-3: /dev/sdc3 size: 128.0 MiB fs: <root required> label: N/A uuid: N/A 

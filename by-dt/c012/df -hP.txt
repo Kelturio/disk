@@ -1,0 +1,5 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdc1       800M  254M  547M  32% /media/searinox/Windows RE tools
+/dev/sdc2       256M   50M  207M  20% /media/searinox/SYSTEM
+/dev/sdc4       915G  912G  3,6G 100% /media/searinox/WD-WCC1S6274413
+/dev/sdc5        16G   12G  4,1G  75% /media/searinox/Recovery image

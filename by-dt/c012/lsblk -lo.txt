@@ -1,0 +1,7 @@
+NAME MOUNTPOINT                       UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL            MODEL            SERIAL
+sdc                                                                               931,5G    512     512     512    1 disk 0x50014ee2093032fe usb                   2115             WD-WCC1S6274413
+sdc1 /media/searinox/Windows RE tools E860095860092F3E                     ntfs     800M    512     512     512    1 part 0x50014ee2093032fe      Windows RE tools                  
+sdc2 /media/searinox/SYSTEM           C20B-B883                            vfat     260M    512     512     512    1 part 0x50014ee2093032fe      SYSTEM                            
+sdc3                                                                                128M    512     512     512    1 part 0x50014ee2093032fe                                        
+sdc4 /media/searinox/WD-WCC1S6274413  76A2E91CA2E8E19B                     ntfs   914,9G    512     512     512    1 part 0x50014ee2093032fe      WD-WCC1S6274413                   
+sdc5 /media/searinox/Recovery image   E68411268410FB2F                     ntfs    15,5G    512     512     512    1 part 0x50014ee2093032fe      Recovery image                    
