@@ -1,0 +1,3 @@
+           ID-4: /dev/sdc type: USB vendor: Seagate model: ST340014AS size: 37.25 GiB serial: 5MQ233GB scheme: MBR 
+           ID-3: /media/searinox/2420017520014EEC size: 37.24 GiB used: 16.32 GiB (43.8%) fs: ntfs dev: /dev/sdc1 label: N/A 
+           uuid: 2420017520014EEC 

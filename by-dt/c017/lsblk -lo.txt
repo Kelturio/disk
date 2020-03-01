@@ -1,0 +1,3 @@
+NAME MOUNTPOINT                       UUID                                 FSTYPE  SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN TRAN LABEL MODEL            SERIAL
+sdc                                                                               37,3G    512     512     512    1 disk     usb        2115             5MQ233GB
+sdc1 /media/searinox/2420017520014EEC 2420017520014EEC                     ntfs   37,3G    512     512     512    1 part                                 
