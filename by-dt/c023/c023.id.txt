@@ -1,0 +1,10 @@
+c023
+ata-Hitachi_HTS543225A7A384_E00G42333PDJLS
+ata-Hitachi_HTS543225A7A384_E00G42333PDJLS-part1
+wwn-0x5000cca6c7f4015c
+wwn-0x5000cca6c7f4015c-part1
+Volume
+2fbae3ae-01
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0-part1
+0028AE2C28AE2120

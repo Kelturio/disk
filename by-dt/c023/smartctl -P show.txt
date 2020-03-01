@@ -1,0 +1,11 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-40-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+Drive found in smartmontools Database.  Drive identity strings:
+MODEL:              Hitachi HTS543225A7A384
+FIRMWARE:           ESBOA60W
+match smartmontools Drive Database entry:
+MODEL REGEXP:       (Hitachi|HGST) HT[ES]5432(16|25|32)A7A38[145]
+FIRMWARE REGEXP:    .*
+MODEL FAMILY:       Hitachi/HGST Travelstar Z5K320
+ATTRIBUTE OPTIONS:  None preset; no -v options are required.
