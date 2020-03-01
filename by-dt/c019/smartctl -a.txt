@@ -1,0 +1,189 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-40-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Hitachi Deskstar 7K160
+Device Model:     Hitachi HDS721680PLA380
+Serial Number:    PVFB34ZLTNVBZB
+LU WWN Device Id: 5 000cca 33ce5a97b
+Firmware Version: P21OABNA
+User Capacity:    80.000.000.000 bytes [80,0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
+Local Time is:    Thu Feb 27 23:42:06 2020 CET
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 1445) seconds.
+Offline data collection
+capabilities: 			 (0x5b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  24) minutes.
+SCT capabilities: 	       (0x003f)	SCT Status supported.
+					SCT Error Recovery Control supported.
+					SCT Feature Control supported.
+					SCT Data Table supported.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE
+  1 Raw_Read_Error_Rate     0x000b   100   100   016    Pre-fail  Always       -       1
+  2 Throughput_Performance  0x0004   167   167   050    Old_age   Offline      -       169
+  3 Spin_Up_Time            0x0007   123   123   024    Pre-fail  Always       -       163 (Average 160)
+  4 Start_Stop_Count        0x0012   100   100   000    Old_age   Always       -       731
+  5 Reallocated_Sector_Ct   0x0033   100   100   005    Pre-fail  Always       -       1
+  7 Seek_Error_Rate         0x000a   100   100   067    Old_age   Always       -       0
+  8 Seek_Time_Performance   0x0004   136   136   020    Old_age   Offline      -       31
+  9 Power_On_Hours          0x0012   100   100   000    Old_age   Always       -       4640
+ 10 Spin_Retry_Count        0x0012   100   100   060    Old_age   Always       -       0
+ 12 Power_Cycle_Count       0x0032   100   100   000    Old_age   Always       -       731
+192 Power-Off_Retract_Count 0x0032   100   100   000    Old_age   Always       -       740
+193 Load_Cycle_Count        0x0012   100   100   000    Old_age   Always       -       740
+194 Temperature_Celsius     0x0002   240   240   000    Old_age   Always       -       25 (Min/Max 17/47)
+196 Reallocated_Event_Count 0x0032   100   100   000    Old_age   Always       -       1
+197 Current_Pending_Sector  0x0022   100   100   000    Old_age   Always       -       2
+198 Offline_Uncorrectable   0x0008   100   100   000    Old_age   Offline      -       0
+199 UDMA_CRC_Error_Count    0x000a   200   253   000    Old_age   Always       -       0
+
+SMART Error Log Version: 1
+ATA Error Count: 6 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 6 occurred at disk power-on lifetime: 4640 hours (193 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 04 64 3e bc 46  Error: UNC 4 sectors at LBA = 0x06bc3e64 = 113000036
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 08 60 3e bc 40 00      00:29:18.100  READ DMA EXT
+  25 00 08 60 3e bc 40 00      00:29:13.400  READ DMA EXT
+  25 00 08 58 3e bc 40 00      00:29:13.400  READ DMA EXT
+  25 00 08 50 3e bc 40 00      00:29:13.400  READ DMA EXT
+  25 00 08 48 3e bc 40 00      00:29:13.400  READ DMA EXT
+
+Error 5 occurred at disk power-on lifetime: 4640 hours (193 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 04 64 3e bc 46  Error: UNC 4 sectors at LBA = 0x06bc3e64 = 113000036
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 08 60 3e bc 40 00      00:29:13.400  READ DMA EXT
+  25 00 08 58 3e bc 40 00      00:29:13.400  READ DMA EXT
+  25 00 08 50 3e bc 40 00      00:29:13.400  READ DMA EXT
+  25 00 08 48 3e bc 40 00      00:29:13.400  READ DMA EXT
+  25 00 08 40 3e bc 40 00      00:29:13.400  READ DMA EXT
+
+Error 4 occurred at disk power-on lifetime: 4640 hours (193 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 2c 64 3e bc 46  Error: UNC 44 sectors at LBA = 0x06bc3e64 = 113000036
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 00 90 3d bc 40 00      00:28:42.800  READ DMA EXT
+  25 00 80 10 3d bc 40 00      00:28:42.800  READ DMA EXT
+  25 00 80 90 3c bc 40 00      00:28:42.800  READ DMA EXT
+  25 00 00 90 3b bc 40 00      00:28:42.800  READ DMA EXT
+  25 00 80 10 3b bc 40 00      00:28:42.800  READ DMA EXT
+
+Error 3 occurred at disk power-on lifetime: 4640 hours (193 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 03 65 c4 9f 46  Error: UNC 3 sectors at LBA = 0x069fc465 = 111133797
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 da 08 60 c4 9f 40 00      00:28:21.000  READ DMA EXT
+  b0 da 00 00 4f c2 00 00      00:28:21.000  SMART RETURN STATUS
+  25 d0 08 60 c4 9f 40 00      00:28:16.300  READ DMA EXT
+  b0 d0 01 00 4f c2 00 00      00:28:16.200  SMART READ DATA
+  25 d1 08 58 c4 9f 40 00      00:28:16.200  READ DMA EXT
+
+Error 2 occurred at disk power-on lifetime: 4640 hours (193 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 03 65 c4 9f 46  Error: UNC 3 sectors at LBA = 0x069fc465 = 111133797
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 d0 08 60 c4 9f 40 00      00:28:16.300  READ DMA EXT
+  b0 d0 01 00 4f c2 00 00      00:28:16.200  SMART READ DATA
+  25 d1 08 58 c4 9f 40 00      00:28:16.200  READ DMA EXT
+  b0 d1 01 00 4f c2 00 00      00:28:16.100  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  25 00 08 50 c4 9f 40 00      00:28:16.100  READ DMA EXT
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%         0         -
+
+SMART Selective self-test log data structure revision number 1
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+

@@ -1,0 +1,3 @@
+NAME MOUNTPOINT           UUID                                 FSTYPE  SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL MODEL            SERIAL
+sdc                                                                   74,5G    512     512     512    1 disk 0x5000cca33ce5a97b usb        2115             PVFB34ZLTNVBZB
+sdc1 /media/searinox/NTFS 196C1D9C12829703                     ntfs   74,5G    512     512     512    1 part 0x5000cca33ce5a97b      NTFS                   

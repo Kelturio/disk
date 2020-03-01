@@ -1,0 +1,3 @@
+           ID-4: /dev/sdc type: USB vendor: Hitachi model: HDS721680PLA380 size: 74.51 GiB serial: PVFB34ZLTNVBZB scheme: MBR 
+           ID-4: /media/searinox/NTFS size: 74.50 GiB used: 66.8 MiB (0.1%) fs: ntfs dev: /dev/sdc1 label: NTFS 
+           uuid: 196C1D9C12829703 

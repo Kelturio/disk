@@ -1,0 +1,2 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdc1        75G   67M   75G   1% /media/searinox/NTFS
