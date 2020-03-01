@@ -1,0 +1,3 @@
+NAME MOUNTPOINT UUID FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL MODEL            SERIAL
+sdd                         298,1G    512     512     512    1 disk 0x5000c5002d5a551e usb        2115             9VMVQ1CZ
+sdd3                            1K    512     512     512    1 part 0x5000c5002d5a551e                             

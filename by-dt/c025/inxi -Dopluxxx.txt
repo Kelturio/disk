@@ -1,0 +1,2 @@
+           ID-5: /dev/sdd type: USB vendor: Seagate model: ST3320418AS size: 298.09 GiB rotation: 7200 rpm serial: 9VMVQ1CZ 
+           ID-5: /dev/sdd3 size: 1 KiB fs: <root required> label: N/A uuid: N/A 

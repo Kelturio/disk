@@ -1,0 +1,8 @@
+c025
+ata-ST3320418AS_9VMVQ1CZ
+ata-ST3320418AS_9VMVQ1CZ-part3
+wwn-0x5000c5002d5a551e
+wwn-0x5000c5002d5a551e-part3
+5aa65d01-03
+pci-0000:00:14.0-usb-0:1.4.2:1.0-scsi-0:0:0:0
+pci-0000:00:14.0-usb-0:1.4.2:1.0-scsi-0:0:0:0-part3
