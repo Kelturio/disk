@@ -1,0 +1,4 @@
+NAME MOUNTPOINT                UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN TRAN LABEL     MODEL            SERIAL
+sdb                                                                        232,9G    512     512     512    1 disk     usb            2115             6RY3A2DF
+sdb1 /media/searinox/PQSERVICE C2182C9CE49BED2A                     ntfs     7,4G    512     512     512    1 part          PQSERVICE                  
+sdb2 /media/searinox/ACER      2EAC2D02AC2CC665                     ntfs   225,6G    512     512     512    1 part          ACER                       

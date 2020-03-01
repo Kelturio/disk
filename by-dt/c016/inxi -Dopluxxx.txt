@@ -1,0 +1,5 @@
+           ID-3: /dev/sdb type: USB vendor: Seagate model: ST3250310AS size: 232.89 GiB serial: 6RY3A2DF scheme: MBR 
+           ID-4: /media/searinox/ACER size: 225.54 GiB used: 36.80 GiB (16.3%) fs: ntfs dev: /dev/sdb2 label: ACER 
+           uuid: 2EAC2D02AC2CC665 
+           ID-5: /media/searinox/PQSERVICE size: 7.35 GiB used: 7.35 GiB (100.0%) fs: ntfs dev: /dev/sdb1 label: PQSERVICE 
+           uuid: C2182C9CE49BED2A 

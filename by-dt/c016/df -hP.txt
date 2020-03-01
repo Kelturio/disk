@@ -1,0 +1,3 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb1       7,4G  7,4G     0 100% /media/searinox/PQSERVICE
+/dev/sdb2       226G   37G  189G  17% /media/searinox/ACER
