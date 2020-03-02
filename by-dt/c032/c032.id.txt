@@ -1,0 +1,7 @@
+c032
+usb-Intenso_External_USB_3.0_20170614154EC-0:0
+usb-Intenso_External_USB_3.0_20170614154EC-0:0-part1
+079c3430-01
+pci-0000:00:14.0-usb-0:6.2:1.0-scsi-0:0:0:0
+pci-0000:00:14.0-usb-0:6.2:1.0-scsi-0:0:0:0-part1
+416e6812-f1c6-436d-952a-7a930c59315c

@@ -1,0 +1,2 @@
+           ID-4: /dev/sdc type: USB vendor: Intenso model: External USB 3.0 size: 1.82 TiB serial: 20170614154EC rev: 1201 
+           ID-2: /dev/sdc1 size: 1.82 TiB fs: crypto_luks label: N/A uuid: 416e6812-f1c6-436d-952a-7a930c59315c 

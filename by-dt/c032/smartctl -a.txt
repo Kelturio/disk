@@ -1,0 +1,8 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-40-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+/dev/sdc: Unknown USB bridge [0x152d:0x0579 (0x100)]
+Please specify device type with the -d option.
+
+Use smartctl -h to get a usage summary
+

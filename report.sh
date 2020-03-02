@@ -16,7 +16,6 @@ wd=$(pwd)
 
 dir="$wd/by-id/$id"
 
-#[ ! -L "$dir" ] && ln -s "$wd/by-id/$id" "$wd/by-dt/$dt"
 [ ! -L "$dir" ] && ln -rs "$wd/by-dt/$dt" "$wd/by-id/$id"
 
 rm "./by-id/$id/tree -a"*.txt "./by-id/$id/tree -a"*.json "./by-id/$id/tree -a"*.htm
@@ -37,7 +36,7 @@ df -hP /dev/$disk* | grep -v "udev " | tee "./by-id/$id/df -hP.txt"
 pause
 mount -l | grep "/dev/$disk" | tee "./by-id/$id/mount -l.txt"
 pause
-cols="NAME,MOUNTPOINT,UUID,FSTYPE,SIZE,MIN-IO,PHY-SEC,LOG-SEC,ROTA,TYPE,WWN,TRAN,LABEL,MODEL,SERIAL"
+cols="KNAME,MOUNTPOINT,UUID,FSTYPE,SIZE,MIN-IO,PHY-SEC,LOG-SEC,ROTA,TYPE,WWN,TRAN,LABEL,MODEL,SERIAL"
 lsblk -lo $cols /dev/$disk | tee "./by-id/$id/lsblk -lo.txt"
 pause
 sed '1d' "./by-id/$id/lsblk -lo.txt" | while read -r line ; do

@@ -1,0 +1,4 @@
+KNAME MOUNTPOINT           UUID                                 FSTYPE       SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE  WWN TRAN LABEL MODEL            SERIAL
+sdc                                                                          1,8T   4096    4096     512    1 disk      usb        External USB 3.0 20170614154EC
+sdc1                       416e6812-f1c6-436d-952a-7a930c59315c crypto_LUKS  1,8T   4096    4096     512    1 part                                  
+dm-2  /media/searinox/IEU3 fc246afd-fbd3-4ae0-9f28-6da802f6c43a ext4         1,8T   4096    4096     512    1 crypt          IEU3                   
