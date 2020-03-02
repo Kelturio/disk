@@ -1,0 +1,5 @@
+KNAME MOUNTPOINT                       UUID                                 FSTYPE        SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE  WWN                TRAN LABEL            MODEL            SERIAL
+sdd                                                                                     698,7G    512     512     512    1 disk  0x50024e92058eec1e usb                   USB 2.0 Drive    S2SHJ9BB603222
+sdd1  /media/searinox/Volume           6EC8CACDC8CA932F                     ntfs           93G    512     512     512    1 part  0x50024e92058eec1e      Volume                            
+sdd2                                   8342b323-3109-4024-b577-bce66efb46c1 crypto_LUKS 605,7G    512     512     512    1 part  0x50024e92058eec1e                                        
+dm-3  /media/searinox/BACKUP_L5590_HOM beb3d1b0-2bee-45f3-bf18-aa513d384ed3 ext4        605,7G    512     512     512    1 crypt                         BACKUP_L5590_HOM                  

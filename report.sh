@@ -11,8 +11,6 @@ id=$(ls -alFR /dev/disk/by-id | grep "/$disk" | awk '{print $9}' | head -n 1)
 wd=$(pwd)
 
 [ -d "./by-id/$id" ] || mkdir -pv "./by-dt/$dt"
-#[ -d "./by-id/$id" ] || mkdir -pv "./by-id/$id"
-#mkdir -pv "./by-id/$id"
 
 dir="$wd/by-id/$id"
 

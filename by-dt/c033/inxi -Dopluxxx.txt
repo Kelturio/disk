@@ -1,0 +1,5 @@
+           ID-5: /dev/sdd type: USB vendor: Samsung model: HN-M750MBB size: 698.64 GiB rotation: 5400 rpm 
+           ID-5: /media/searinox/Volume size: 92.99 GiB used: 46.16 GiB (49.6%) fs: ntfs dev: /dev/sdd1 label: Volume 
+           uuid: 6EC8CACDC8CA932F 
+--
+           ID-7: /dev/sdd2 size: 605.65 GiB fs: crypto_luks label: N/A uuid: 8342b323-3109-4024-b577-bce66efb46c1 
