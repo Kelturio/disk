@@ -1,0 +1,9 @@
+           ID-3: /dev/sdb type: USB vendor: Toshiba model: MQ03ABB200 size: 1.82 TiB rotation: 5400 rpm serial: 371IC5YCT 
+           ID-3: /media/searinox/Elements size: 1.09 TiB used: 1.06 TiB (97.4%) fs: ntfs dev: /dev/sdb1 label: Elements 
+           uuid: E2524B7C524B5487 
+           ID-4: /media/searinox/System size: 465.42 GiB used: 439.94 GiB (94.5%) fs: ntfs dev: /dev/sdb3 label: System 
+           uuid: EAB87EEEB87EB921 
+           ID-5: /media/searinox/System Reserved size: 350.0 MiB used: 258.0 MiB (73.7%) fs: ntfs dev: /dev/sdb2 
+           label: System Reserved uuid: 62DE7A5DDE7A2A05 
+           ID-6: /media/searinox/gt725 size: 273.91 GiB used: 211.46 GiB (77.2%) fs: ext4 dev: /dev/sdb4 label: gt725 
+           uuid: 88b58f5e-1fea-45fa-ba58-8ab9c43f51d4 

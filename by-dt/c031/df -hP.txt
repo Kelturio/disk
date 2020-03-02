@@ -1,0 +1,5 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb1       1,1T  1,1T   30G  98% /media/searinox/Elements
+/dev/sdb2       350M  259M   92M  74% /media/searinox/System Reserved
+/dev/sdb3       466G  440G   26G  95% /media/searinox/System
+/dev/sdb4       274G  212G   49G  82% /media/searinox/gt725

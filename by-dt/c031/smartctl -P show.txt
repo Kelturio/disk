@@ -1,0 +1,8 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-40-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+No presets are defined for this drive.  Its identity strings:
+MODEL:    TOSHIBA MQ03ABB200
+FIRMWARE: JP050U
+do not match any of the known regular expressions.
+Use -P showall to list all known regular expressions.

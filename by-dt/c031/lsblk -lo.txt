@@ -1,0 +1,6 @@
+NAME MOUNTPOINT                      UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL           MODEL            SERIAL
+sdb                                                                                1,8T    512     512     512    1 disk 0x50000397a3b80322 usb                  HV620            371IC5YCT
+sdb1 /media/searinox/Elements        E2524B7C524B5487                     ntfs     1,1T    512     512     512    1 part 0x50000397a3b80322      Elements                         
+sdb2 /media/searinox/System Reserved 62DE7A5DDE7A2A05                     ntfs     350M    512     512     512    1 part 0x50000397a3b80322      System Reserved                  
+sdb3 /media/searinox/System          EAB87EEEB87EB921                     ntfs   465,4G    512     512     512    1 part 0x50000397a3b80322      System                           
+sdb4 /media/searinox/gt725           88b58f5e-1fea-45fa-ba58-8ab9c43f51d4 ext4   279,3G    512     512     512    1 part 0x50000397a3b80322      gt725                            
