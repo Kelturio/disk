@@ -1,0 +1,3 @@
+           ID-2: /dev/sda type: USB vendor: Seagate model: ST250DM000-1BD141 size: 232.89 GiB rotation: 7200 rpm 
+           ID-3: /media/searinox/Volume size: 232.88 GiB used: 96.7 MiB (0.0%) fs: ntfs dev: /dev/sda1 label: Volume 
+           uuid: C63C2A9D3C2A888F 
