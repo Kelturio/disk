@@ -1,7 +1,7 @@
 c032
-usb-Intenso_External_USB_3.0_20170614154EC-0:0 -> ../../sda
-usb-Intenso_External_USB_3.0_20170614154EC-0:0-part1 -> ../../sda1
-079c3430-01 -> ../../sda1
-pci-0000:00:14.0-usb-0:6.2:1.0-scsi-0:0:0:0 -> ../../sda
-pci-0000:00:14.0-usb-0:6.2:1.0-scsi-0:0:0:0-part1 -> ../../sda1
-416e6812-f1c6-436d-952a-7a930c59315c -> ../../sda1
+usb-Intenso_External_USB_3.0_20170614154EC-0:0 -> ../../sdx
+usb-Intenso_External_USB_3.0_20170614154EC-0:0-part1 -> ../../sdx1
+079c3430-01 -> ../../sdx1
+pci-0000:00:14.0-usb-0:6.2:1.0-scsi-0:0:0:0 -> ../../sdx
+pci-0000:00:14.0-usb-0:6.2:1.0-scsi-0:0:0:0-part1 -> ../../sdx1
+416e6812-f1c6-436d-952a-7a930c59315c -> ../../sdx1
