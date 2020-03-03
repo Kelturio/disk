@@ -1,0 +1,10 @@
+c035
+ata-Hitachi_HDT721016SLA380_STA0L7MB35MARB
+ata-Hitachi_HDT721016SLA380_STA0L7MB35MARB-part1
+wwn-0x5000cca345ecd4fd
+wwn-0x5000cca345ecd4fd-part1
+Volume
+ad95dcc6-01
+pci-0000:00:14.0-usb-0:1.4.2:1.0-scsi-0:0:0:0
+pci-0000:00:14.0-usb-0:1.4.2:1.0-scsi-0:0:0:0-part1
+0CA44E0BA44DF7AA

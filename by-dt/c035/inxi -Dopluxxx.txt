@@ -1,0 +1,3 @@
+           ID-3: /dev/sdb type: USB vendor: Hitachi model: HDT721016SLA380 size: 149.05 GiB rotation: 7200 rpm 
+           ID-4: /media/searinox/Volume1 size: 149.05 GiB used: 93.7 MiB (0.1%) fs: ntfs dev: /dev/sdb1 label: Volume 
+           uuid: 0CA44E0BA44DF7AA 
