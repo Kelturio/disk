@@ -1,0 +1,3 @@
+KNAME MOUNTPOINT             UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL  MODEL            SERIAL
+sda                                                                      149,1G    512     512     512    1 disk 0x50014ee0acf29e00 usb         2115             WD-WMAV3E499032
+sda1  /media/searinox/Volume 2098AD6498AD3964                     ntfs     149G    512     512     512    1 part 0x50014ee0acf29e00      Volume                  

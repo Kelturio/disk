@@ -1,0 +1,2 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1       150G   94M  149G   1% /media/searinox/Volume

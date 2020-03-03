@@ -1,0 +1,11 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-40-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+Drive found in smartmontools Database.  Drive identity strings:
+MODEL:              WDC WD1600AAJS-00L7A0
+FIRMWARE:           01.03E01
+match smartmontools Drive Database entry:
+MODEL REGEXP:       WDC WD((8|12|16|25|32)00AABS|(8|12|16|25|32|40|50)00AAJS)-.*
+FIRMWARE REGEXP:    .*
+MODEL FAMILY:       Western Digital Caviar Blue Serial ATA
+ATTRIBUTE OPTIONS:  None preset; no -v options are required.
