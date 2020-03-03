@@ -1,0 +1,12 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-40-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+Drive found in smartmontools Database.  Drive identity strings:
+MODEL:              ST250DM000-1BD141
+FIRMWARE:           KC45
+match smartmontools Drive Database entry:
+MODEL REGEXP:       ST(250|320|500|750)DM00[0-3]-.*
+FIRMWARE REGEXP:    .*
+MODEL FAMILY:       Seagate Barracuda 7200.14 (AF)
+ATTRIBUTE OPTIONS:  188 Command_Timeout
+                    240 Head_Flying_Hours
