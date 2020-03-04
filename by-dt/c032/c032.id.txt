@@ -1,7 +1,11 @@
 c032
+dm-name-luks-416e6812-f1c6-436d-952a-7a930c59315c -> ../../dm-1
+dm-uuid-CRYPT-LUKS1-416e6812f1c6436d952a7a930c59315c-luks-416e6812-f1c6-436d-952a-7a930c59315c -> ../../dm-1
 usb-Intenso_External_USB_3.0_20170614154EC-0:0 -> ../../sdx
 usb-Intenso_External_USB_3.0_20170614154EC-0:0-part1 -> ../../sdx1
+IEU3 -> ../../dm-1
 079c3430-01 -> ../../sdx1
 pci-0000:00:14.0-usb-0:6.2:1.0-scsi-0:0:0:0 -> ../../sdx
 pci-0000:00:14.0-usb-0:6.2:1.0-scsi-0:0:0:0-part1 -> ../../sdx1
 416e6812-f1c6-436d-952a-7a930c59315c -> ../../sdx1
+fc246afd-fbd3-4ae0-9f28-6da802f6c43a -> ../../dm-1
