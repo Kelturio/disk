@@ -1,6 +1,12 @@
 #!/bin/bash
 
 
+# 
+sudo smartctl -l error /dev/sdb
+sudo smartctl -l selftest /dev/sdb
+sudo smartctl -l devstat /dev/sdc
+
+
 # dist upgrade
 sudo -s <<< 'apt update -y && apt dist-upgrade -y'
 

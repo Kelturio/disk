@@ -1,0 +1,7 @@
+           ID-2: /dev/sdx type: USB vendor: Western Digital model: WD Elements 25A3 size: 3.64 TiB 
+           serial: 574343374B30565236393341 rev: 1019 scheme: GPT 
+--
+           ID-5: /media/searinox/image size: 3.58 TiB used: 3.34 TiB (93.3%) fs: ext4 dev: /dev/dm-1 label: image 
+           uuid: 961e0e3b-1056-40ea-90e3-46537d3af922 
+--
+Unmounted: ID-1: /dev/sdx1 size: 3.64 TiB fs: crypto_luks label: N/A uuid: 96482eb3-0380-4504-a2ac-9a00c63af7b4 

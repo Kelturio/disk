@@ -1,0 +1,11 @@
+c038
+dm-name-luks-96482eb3-0380-4504-a2ac-9a00c63af7b4 -> ../../dm-1
+dm-uuid-CRYPT-LUKS1-96482eb303804504a2ac9a00c63af7b4-luks-96482eb3-0380-4504-a2ac-9a00c63af7b4 -> ../../dm-1
+usb-WD_Elements_25A3_574343374B30565236393341-0:0 -> ../../sdx
+usb-WD_Elements_25A3_574343374B30565236393341-0:0-part1 -> ../../sdx1
+image -> ../../dm-1
+4cccc2b4-c775-421e-959a-d4520079c1ae -> ../../sdx1
+pci-0000:00:14.0-usb-0:3:1.0-scsi-0:0:0:0 -> ../../sdx
+pci-0000:00:14.0-usb-0:3:1.0-scsi-0:0:0:0-part1 -> ../../sdx1
+961e0e3b-1056-40ea-90e3-46537d3af922 -> ../../dm-1
+96482eb3-0380-4504-a2ac-9a00c63af7b4 -> ../../sdx1

@@ -4,7 +4,9 @@
 
 set -e
 
-echo "Akk Disk Indexer Script"
+sudo echo "Akk Disk Indexer Script"
+
+[ "$(id -u)" == "0" ] && { show_message --error $"Cannot run as root user" ; exit 1 ; }
 
 [ -d "$HOME/Git/disk" ] && cd "$HOME/Git/disk"
 
@@ -15,7 +17,7 @@ pause(){
 treew(){
 #   log="$lwd/tree/tree -a p$fs_partnr $fs_uuid.txt" ; tree -a "$fs_mountpoint" 2>&1 | tee > "$log" ; bat --paging never "$log"
 #	tree $2 "$3" 2>&1 | tee > "$1" ; bat --paging never "$1"
-	tree -o "$1" $2 "$3" ; bat --paging never "$1"
+	sudo tree -o "$1" $2 "$3" #; bat --paging never "$1"
 }
 
 [ "$1" != "" ] && disk=$1 || read -p 'dev disk: ' disk
@@ -26,7 +28,6 @@ cwd=$(pwd)
 lwd="$cwd/by-dt/$dt"
 iwd="$cwd/by-id/$id"
 
-#fna=("$lwd/$dt.id.txt" "$lwd/inxi -Dopluxxx.txt" "$lwd/df -hP.txt" "$lwd/mount -l.txt" "$lwd/lsblk -lo.txt")
 declare -a fna
 
 echo -e "\$disk\t= $disk\n\$dt \t= $dt\n\$id \t= $id\n\$cwd\t= $cwd\n\$lwd\t= $lwd\n\$iwd\t= $iwd\n" | bat ; pause
@@ -36,34 +37,36 @@ echo -e "\$disk\t= $disk\n\$dt \t= $dt\n\$id \t= $id\n\$cwd\t= $cwd\n\$lwd\t= $l
 
 rm "$lwd/tree -a"*.txt "$lwd/tree -a"*.json "$lwd/tree -a"*.htm 2>&1| bat
 
-#lsblk -lnop KNAME /dev/$disk 
-log="$lwd/lsblk -lno.tmp" ; lsblk -lno KNAME /dev/$disk | tee > "$log" ; bat "$log"
-log="$lwd/lsblk -lnpo.tmp" ; lsblk -lnpo KNAME /dev/$disk | tee > "$log" ; bat "$log"
+#log="$lwd/lsblk -lno.tmp" ; lsblk -lno KNAME /dev/$disk | tee > "$log" ; bat "$log"
+#log="$lwd/lsblk -lnpo.tmp" ; lsblk -lnpo KNAME /dev/$disk | tee > "$log" ; bat "$log"
+#log="$lwd/gsp.tmp" ; lsblk -lnpo NAME /dev/$disk | tee > "$log" ; bat "$log"
 
-fna+=("$lwd/$dt.id.txt") ; { echo $dt ; ls -alFR /dev/disk | grep -f "$lwd/lsblk -lno.tmp" | awk '{print $9" "$10" "$11}' ; } | tee > "${fna[0]}" ; bat --highlight-line 1 "${fna[0]}"
+#out=""
+log="$lwd/gsp.tmp" ; > "$log" ; output_list=("o KNAME" "po KNAME" "o NAME" "po NAME")
+for args in "${output_list[@]}" ; do out+="$(lsblk -ln -$args /dev/$disk)\n" ; done
+echo -e "$out" | sort -u | sed '/^$/d' > "$log" ; bat "$log"
+
+fna+=("$lwd/$dt.id.txt") ; { echo $dt ; ls -alFR /dev/disk | grep -f "$lwd/gsp.tmp" | awk '{print $9" "$10" "$11}' ; } | tee > "${fna[0]}" ; bat --highlight-line 1 "${fna[0]}"
 #pause
-#log="$lwd/hdparm -I.txt" ; sudo hdparm -I /dev/$disk 2>&1 | tee > "$log" ; bat "$log"
+log="$lwd/hdparm -I.txt" ; sudo hdparm -I /dev/$disk 2>&1 | tee > "$log" ; bat "$log"
 #pause
 log="$lwd/smartctl -a.txt" ; sudo smartctl --all /dev/$disk 2>&1 | tee > "$log" ; bat --paging never "$log"
 ##pause
 log="$lwd/smartctl -x.txt" ; sudo smartctl --xall /dev/$disk 2>&1 | tee > "$log" ; bat "$log"
 #pause
-log="$lwd/smartctl -P show.txt" ; sudo smartctl --presets=show /dev/$disk 2>&1 | tee > "$log" ; bat "$log"
+log="$lwd/smartctl -P show.txt" ; sudo smartctl --presets=show /dev/$disk 2>&1 | tee > "$log" ; bat "$log" ;
 #pause
-fna+=("$lwd/inxi -Dopluxxx.txt") ; { inxi -Dopluxxx | grep -f "$lwd/lsblk -lnpo.tmp" -A 1 ; } | tee > "${fna[1]}" ; bat "${fna[1]}"
+fna+=("$lwd/inxi -Dopluxxx.txt") ; sudo inxi -Dopluxxx | grep -f "$lwd/gsp.tmp" -A 1 | tee > "${fna[1]}" ; bat "${fna[1]}"
 #pause
-#fna+=("$lwd/df -hP.txt") ; df -hP /dev/$disk* | grep -v "udev " | tee > "${fna[2]}" ; bat "${fna[2]}"
-fna+=("$lwd/df -hP.txt") ; df -hP | grep -f "$lwd/lsblk -lnpo.tmp" | tee > "${fna[2]}" ; bat "${fna[2]}"
+fna+=("$lwd/df -hP.txt") ; df -hP | grep -f "$lwd/gsp.tmp" | tee > "${fna[2]}" ; bat "${fna[2]}"
 #pause
-#fna+=("$lwd/mount -l.txt") ; mount -l 2>&1 | grep "/dev/$disk" | tee > "${fna[3]}" ; bat "${fna[3]}"
-fna+=("$lwd/mount -l.txt") ; mount -l 2>&1 | grep -f "$lwd/lsblk -lnpo.tmp" "/dev/$disk" | tee > "${fna[3]}" ; bat "${fna[3]}"
+fna+=("$lwd/mount -l.txt") ; mount -l 2>&1 | grep -f "$lwd/gsp.tmp" | tee > "${fna[3]}" ; bat "${fna[3]}"
 #pause
 cols="KNAME,MOUNTPOINT,UUID,FSTYPE,SIZE,MIN-IO,PHY-SEC,LOG-SEC,ROTA,TYPE,WWN,TRAN,LABEL,MODEL,SERIAL"
 fna+=("$lwd/lsblk -lo.txt") ; lsblk -lo $cols /dev/$disk | tee > "${fna[4]}" ; bat "${fna[4]}"
 #pause
 sed '1d' "$lwd/lsblk -lo.txt" | while read -r line ; do
 	fs_kname=$(awk '{print $1}' <<< "$line")
-	echo "$line"
 	fs_mountpoint=$(lsblk -no MOUNTPOINT /dev/$fs_kname | head -n 1)
 	[ -z "$fs_mountpoint" ] && continue
 	fs_uuid=$(lsblk -no UUID /dev/$fs_kname)
@@ -84,10 +87,7 @@ sed '1d' "$lwd/lsblk -lo.txt" | while read -r line ; do
 	cd "$cwd"
 done
 
-echo "${fna[@]}" | bat
+echo -e "${fna[*]}" | bat
 for val in "${fna[@]}"; do sed -i "s/$disk/sdx/g" "$val" ; done
-rm "$lwd/"*.tmp
 
-#sudo smartctl -l error /dev/sdb
-#sudo smartctl -l selftest /dev/sdb
-#sudo smartctl -l devstat /dev/sdc
+#rm "$lwd/"*.tmp

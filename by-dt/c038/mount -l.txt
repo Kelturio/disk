@@ -1,0 +1,1 @@
+/dev/mapper/luks-96482eb3-0380-4504-a2ac-9a00c63af7b4 on /media/searinox/image type ext4 (rw,nosuid,nodev,relatime,uhelper=udisks2) [image]
