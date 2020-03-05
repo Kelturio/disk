@@ -1,1 +1,2 @@
+Filesystem               Size  Used Avail Use% Mounted on
 /dev/dm-1                3,6T  3,4T   59G  99% /media/searinox/image

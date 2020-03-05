@@ -9,12 +9,10 @@ by-dt/*/tree -*.json
 
 by-dt/*/ebay/
 
-*.scn
+by-dt/*/ASMedia AS2115.scn
 
 by-id/
 
-by-dt/c032/tree/
+by-dt/*/tree/
 
-by-dt/c038/gsp.tmp
-
-by-dt/c038/tree/
+by-dt/*/gsp.tmp

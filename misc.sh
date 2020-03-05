@@ -24,3 +24,6 @@ if [ "$(id -u)" == "0" ]; then
 	show_message --error $"Cannot run as root user"
 	exit 1
 fi
+
+
+hwinfo
