@@ -1,10 +1,10 @@
-25: SCSI 00.0: 10600 Disk
+24: SCSI 100.0: 10600 Disk
   [Created at block.245]
   Unique ID: 7bWa.4X1PBEB0ZOA
   Parent ID: MZfG.LwLZmU2x6Z6
-  SysFS ID: /class/block/sda
-  SysFS BusID: 0:0:0:0
-  SysFS Device Link: /devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/host0/target0:0:0/0:0:0:0
+  SysFS ID: /class/block/sdb
+  SysFS BusID: 1:0:0:0
+  SysFS Device Link: /devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/host1/target1:0:0/1:0:0:0
   Hardware Class: disk
   Model: "WD Elements 25A3"
   Vendor: usb 0x1058 "WD"
@@ -13,9 +13,9 @@
   Serial ID: "574343374B30565236393341"
   Driver: "usb-storage", "sd"
   Driver Modules: "usb_storage"
-  Device File: /dev/sda (/dev/sg0)
-  Device Files: /dev/sda, /dev/disk/by-id/usb-WD_Elements_25A3_574343374B30565236393341-0:0, /dev/disk/by-path/pci-0000:00:14.0-usb-0:3:1.0-scsi-0:0:0:0
-  Device Number: block 8:0-8:15 (char 21:0)
+  Device File: /dev/sdb (/dev/sg1)
+  Device Files: /dev/sdb, /dev/disk/by-id/usb-WD_Elements_25A3_574343374B30565236393341-0:0, /dev/disk/by-path/pci-0000:00:14.0-usb-0:3:1.0-scsi-0:0:0:0
+  Device Number: block 8:16-8:31 (char 21:1)
   Module Alias: "usb:v1058p25A3d1019dc00dsc00dp00ic08isc06ip50in00"
   Driver Info #0:
     Driver Status: uas is active

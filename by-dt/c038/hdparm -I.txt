@@ -1,5 +1,5 @@
 
-/dev/sda:
+/dev/sdx:
 
 ATA device, with non-removable media
 	Model Number:       WDC WD40EZRZ-00GXCB0                    

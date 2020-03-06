@@ -2,7 +2,7 @@
 
 # Akk Disk Indexer Script -- by Searinox
 
-set -e
+set -eu
 
 echo "Akk Disk Indexer Script" ; sudo echo ""
 
@@ -20,9 +20,12 @@ treew(){
 
 own () { [[ -O "$1" ]] && : || { sudo chown $USER:$USER "$1" && echo -e "chowned\t$1" ; } ; }
 
-treeown () { for file in "$lwd/tree/tree -a"*.{txt,json,htm} ; do own "$file" ; done ; return 0 ; }
+treeown () { for file in "$lwd/tree/tree -a"*.{txt,json,htm} ; do own "$file" ; done ; }
 
 hwi () { log="$lwd/hwinfo --$1 p$pn $uuid.txt" ; out=$(hwinfo --$1 --only /dev/$kname) ; [ -z "$out" ] && : || { echo "$out" > "$log" ; bat "$log" ; } ; }
+
+#akk () {  ; }
+#sifte () { local val="$lwd/$1.txt" ; fna+=("$val") ; sudo $1}
 
 [ "$1" != "" ] && disk=$1 || read -p 'dev disk: ' disk
 [ "$2" != "" ] && dt=$2 || read -p 'dev tag: ' dt
@@ -37,8 +40,8 @@ echo -e "\$disk\t= $disk\n\$dt \t= $dt\n\$id \t= $id\n\$cwd\t= $cwd\n\$lwd\t= $l
 [ -d "$lwd/tree" ] || mkdir -pv "$lwd/tree" 2>&1 | bat
 [ ! -L "$iwd" ] && ln -rs "$lwd" "$iwd" 2>&1 | bat
 
-rm "$lwd/tree -a"*.txt "$lwd/tree -a"*.json "$lwd/tree -a"*.htm 2>&1| bat
-treeown | bat && rm "$lwd/tree/tree -a"*.{txt,json,htm} 2>&1| bat 
+rm "$lwd/tree -a"*.txt "$lwd/tree -a"*.json "$lwd/tree -a"*.htm 2>&1 | bat
+treeown | bat && rm "$lwd/tree/tree -a"*.{txt,json,htm} 2>&1 | bat 
 
 log="$lwd/gsp.tmp" ; > "$log" ; output_list=("o KNAME" "po KNAME" "o NAME" "po NAME")
 for args in "${output_list[@]}" ; do out+="$(lsblk -ln -$args $dd)\n" ; done
