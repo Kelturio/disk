@@ -1,0 +1,425 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-40-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Hitachi Travelstar 5K500.B
+Device Model:     Hitachi HTS545050B9A300
+Serial Number:    090627PB4406Q7H4UR4A
+LU WWN Device Id: 5 000cca 597d04984
+Firmware Version: PB4OC60F
+User Capacity:    500.107.862.016 bytes [500 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    5400 rpm
+Form Factor:      2.5 inches
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA8-ACS T13/1699-D revision 6
+SATA Version is:  SATA 2.6, 3.0 Gb/s
+Local Time is:    Sat Mar  7 17:21:30 2020 CET
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Disabled
+APM level is:     128 (minimum power consumption without standby)
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Enabled
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  645) seconds.
+Offline data collection
+capabilities: 			 (0x5b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 ( 158) minutes.
+SCT capabilities: 	       (0x003d)	SCT Status supported.
+					SCT Error Recovery Control supported.
+					SCT Feature Control supported.
+					SCT Data Table supported.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   084   084   062    -    305
+  2 Throughput_Performance  P-S---   100   100   040    -    0
+  3 Spin_Up_Time            POS---   142   142   033    -    2
+  4 Start_Stop_Count        -O--C-   089   089   000    -    18451
+  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
+  7 Seek_Error_Rate         PO-R--   100   100   067    -    0
+  8 Seek_Time_Performance   P-S---   100   100   040    -    0
+  9 Power_On_Hours          -O--C-   087   087   000    -    5755
+ 10 Spin_Retry_Count        PO--C-   100   100   060    -    0
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    5366
+191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    49
+193 Load_Cycle_Count        -O--C-   094   094   000    -    61442
+194 Temperature_Celsius     -O----   239   239   000    -    23 (Min/Max 7/56)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    3
+197 Current_Pending_Sector  -O---K   100   100   000    -    6
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+223 Load_Retry_Count        -O-R--   100   100   000    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      1  Comprehensive SMART error log
+0x03       GPL     R/O      1  Ext. Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      1  Extended self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+0xe0       GPL,SL  R/W      1  SCT Command/Status
+0xe1       GPL,SL  R/W      1  SCT Data Transfer
+
+SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
+Device Error Count: 75 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 75 [1] occurred at disk power-on lifetime: 5755 hours (239 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 30 00 00 23 27 26 10 e3 00  Error: UNC 48 sectors at LBA = 0x23272610 = 589768208
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 00 23 27 25 c0 e0 00     00:02:34.800  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2c c0 e0 00     00:02:34.800  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2c 40 e0 00     00:02:34.800  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2b c0 e0 00     00:02:34.800  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2b 40 e0 00     00:02:34.800  READ DMA EXT
+
+Error 74 [0] occurred at disk power-on lifetime: 5755 hours (239 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 10 00 00 23 27 26 10 e3 00  Error: UNC 16 sectors at LBA = 0x23272610 = 589768208
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 00 23 27 25 a0 e0 00     00:02:30.900  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2c a0 e0 00     00:02:30.900  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2c 20 e0 00     00:02:30.900  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2b a0 e0 00     00:02:30.900  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2b 20 e0 00     00:02:30.900  READ DMA EXT
+
+Error 73 [3] occurred at disk power-on lifetime: 5755 hours (239 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 70 00 00 23 27 26 10 e3 00  Error: UNC 112 sectors at LBA = 0x23272610 = 589768208
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 00 23 27 26 00 e0 00     00:02:27.100  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 25 80 e0 00     00:02:27.100  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2c 80 e0 00     00:02:27.100  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2c 00 e0 00     00:02:27.100  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2b 80 e0 00     00:02:27.100  READ DMA EXT
+
+Error 72 [2] occurred at disk power-on lifetime: 5755 hours (239 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 50 00 00 23 27 26 10 e3 00  Error: UNC 80 sectors at LBA = 0x23272610 = 589768208
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 00 23 27 25 e0 e0 00     00:02:23.200  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 25 60 e0 00     00:02:23.200  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2c 60 e0 00     00:02:23.200  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 2b e0 e0 00     00:02:23.200  READ DMA EXT
+  25 00 00 00 80 00 00 23 27 24 e0 e0 00     00:02:23.200  READ DMA EXT
+
+SMART Extended Self-test Log Version: 1 (1 sectors)
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+SMART Selective self-test log data structure revision number 1
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+
+SCT Status Version:                  3
+SCT Version (vendor specific):       256 (0x0100)
+SCT Support Level:                   1
+Device State:                        Active (0)
+Current Temperature:                    23 Celsius
+Power Cycle Min/Max Temperature:     22/23 Celsius
+Lifetime    Min/Max Temperature:      7/56 Celsius
+Lifetime    Average Temperature:        36 Celsius
+Under/Over Temperature Limit Count:   0/0
+
+SCT Temperature History Version:     2
+Temperature Sampling Period:         1 minute
+Temperature Logging Interval:        1 minute
+Min/Max recommended Temperature:      5/60 Celsius
+Min/Max Temperature Limit:           -40/65 Celsius
+Temperature History Size (Index):    478 (182)
+
+Index    Estimated Time   Temperature Celsius
+ 183    2020-03-07 09:24    43  ************************
+ ...    ..( 70 skipped).    ..  ************************
+ 254    2020-03-07 10:35    43  ************************
+ 255    2020-03-07 10:36    44  *************************
+ ...    ..(  9 skipped).    ..  *************************
+ 265    2020-03-07 10:46    44  *************************
+ 266    2020-03-07 10:47    43  ************************
+ ...    ..(  4 skipped).    ..  ************************
+ 271    2020-03-07 10:52    43  ************************
+ 272    2020-03-07 10:53    42  ***********************
+ ...    ..(  3 skipped).    ..  ***********************
+ 276    2020-03-07 10:57    42  ***********************
+ 277    2020-03-07 10:58    41  **********************
+ ...    ..(  3 skipped).    ..  **********************
+ 281    2020-03-07 11:02    41  **********************
+ 282    2020-03-07 11:03    40  *********************
+ ...    ..( 18 skipped).    ..  *********************
+ 301    2020-03-07 11:22    40  *********************
+ 302    2020-03-07 11:23    41  **********************
+ 303    2020-03-07 11:24    41  **********************
+ 304    2020-03-07 11:25    42  ***********************
+ 305    2020-03-07 11:26    42  ***********************
+ 306    2020-03-07 11:27    43  ************************
+ 307    2020-03-07 11:28    43  ************************
+ 308    2020-03-07 11:29    43  ************************
+ 309    2020-03-07 11:30    44  *************************
+ 310    2020-03-07 11:31    44  *************************
+ 311    2020-03-07 11:32    44  *************************
+ 312    2020-03-07 11:33    45  **************************
+ ...    ..(  3 skipped).    ..  **************************
+ 316    2020-03-07 11:37    45  **************************
+ 317    2020-03-07 11:38    46  ***************************
+ ...    ..(  4 skipped).    ..  ***************************
+ 322    2020-03-07 11:43    46  ***************************
+ 323    2020-03-07 11:44    45  **************************
+ 324    2020-03-07 11:45    45  **************************
+ 325    2020-03-07 11:46    44  *************************
+ 326    2020-03-07 11:47    44  *************************
+ 327    2020-03-07 11:48    43  ************************
+ ...    ..(  3 skipped).    ..  ************************
+ 331    2020-03-07 11:52    43  ************************
+ 332    2020-03-07 11:53    42  ***********************
+ ...    ..(  3 skipped).    ..  ***********************
+ 336    2020-03-07 11:57    42  ***********************
+ 337    2020-03-07 11:58    41  **********************
+ ...    ..(  3 skipped).    ..  **********************
+ 341    2020-03-07 12:02    41  **********************
+ 342    2020-03-07 12:03    40  *********************
+ ...    ..( 28 skipped).    ..  *********************
+ 371    2020-03-07 12:32    40  *********************
+ 372    2020-03-07 12:33    41  **********************
+ ...    ..(  2 skipped).    ..  **********************
+ 375    2020-03-07 12:36    41  **********************
+ 376    2020-03-07 12:37    42  ***********************
+ 377    2020-03-07 12:38    42  ***********************
+ 378    2020-03-07 12:39    43  ************************
+ ...    ..(  2 skipped).    ..  ************************
+ 381    2020-03-07 12:42    43  ************************
+ 382    2020-03-07 12:43    44  *************************
+ 383    2020-03-07 12:44    44  *************************
+ 384    2020-03-07 12:45    44  *************************
+ 385    2020-03-07 12:46    45  **************************
+ 386    2020-03-07 12:47    45  **************************
+ 387    2020-03-07 12:48    46  ***************************
+ ...    ..(  3 skipped).    ..  ***************************
+ 391    2020-03-07 12:52    46  ***************************
+ 392    2020-03-07 12:53    47  ****************************
+ 393    2020-03-07 12:54    47  ****************************
+ 394    2020-03-07 12:55    46  ***************************
+ ...    ..(  6 skipped).    ..  ***************************
+ 401    2020-03-07 13:02    46  ***************************
+ 402    2020-03-07 13:03    45  **************************
+ ...    ..(  4 skipped).    ..  **************************
+ 407    2020-03-07 13:08    45  **************************
+ 408    2020-03-07 13:09    44  *************************
+ 409    2020-03-07 13:10    44  *************************
+ 410    2020-03-07 13:11    45  **************************
+ 411    2020-03-07 13:12    45  **************************
+ 412    2020-03-07 13:13    45  **************************
+ 413    2020-03-07 13:14    44  *************************
+ ...    ..(  2 skipped).    ..  *************************
+ 416    2020-03-07 13:17    44  *************************
+ 417    2020-03-07 13:18    43  ************************
+ ...    ..(  6 skipped).    ..  ************************
+ 424    2020-03-07 13:25    43  ************************
+ 425    2020-03-07 13:26    42  ***********************
+ ...    ..( 16 skipped).    ..  ***********************
+ 442    2020-03-07 13:43    42  ***********************
+ 443    2020-03-07 13:44    43  ************************
+ 444    2020-03-07 13:45    43  ************************
+ 445    2020-03-07 13:46    43  ************************
+ 446    2020-03-07 13:47    44  *************************
+ 447    2020-03-07 13:48    44  *************************
+ 448    2020-03-07 13:49    44  *************************
+ 449    2020-03-07 13:50    43  ************************
+ ...    ..(  4 skipped).    ..  ************************
+ 454    2020-03-07 13:55    43  ************************
+ 455    2020-03-07 13:56    42  ***********************
+ ...    ..(  7 skipped).    ..  ***********************
+ 463    2020-03-07 14:04    42  ***********************
+ 464    2020-03-07 14:05    41  **********************
+ ...    ..( 33 skipped).    ..  **********************
+  20    2020-03-07 14:39    41  **********************
+  21    2020-03-07 14:40    40  *********************
+  22    2020-03-07 14:41    41  **********************
+  23    2020-03-07 14:42    40  *********************
+  24    2020-03-07 14:43    41  **********************
+ ...    ..(  7 skipped).    ..  **********************
+  32    2020-03-07 14:51    41  **********************
+  33    2020-03-07 14:52    40  *********************
+ ...    ..( 12 skipped).    ..  *********************
+  46    2020-03-07 15:05    40  *********************
+  47    2020-03-07 15:06    29  **********
+  48    2020-03-07 15:07    29  **********
+  49    2020-03-07 15:08    29  **********
+  50    2020-03-07 15:09    30  ***********
+  51    2020-03-07 15:10    31  ************
+  52    2020-03-07 15:11    32  *************
+  53    2020-03-07 15:12    33  **************
+  54    2020-03-07 15:13    34  ***************
+  55    2020-03-07 15:14    35  ****************
+  56    2020-03-07 15:15    35  ****************
+  57    2020-03-07 15:16    36  *****************
+  58    2020-03-07 15:17    36  *****************
+  59    2020-03-07 15:18    37  ******************
+  60    2020-03-07 15:19    37  ******************
+  61    2020-03-07 15:20    37  ******************
+  62    2020-03-07 15:21    38  *******************
+ ...    ..(  8 skipped).    ..  *******************
+  71    2020-03-07 15:30    38  *******************
+  72    2020-03-07 15:31    39  ********************
+  73    2020-03-07 15:32    39  ********************
+  74    2020-03-07 15:33    40  *********************
+  75    2020-03-07 15:34    40  *********************
+  76    2020-03-07 15:35    40  *********************
+  77    2020-03-07 15:36    41  **********************
+  78    2020-03-07 15:37    41  **********************
+  79    2020-03-07 15:38    41  **********************
+  80    2020-03-07 15:39    42  ***********************
+  81    2020-03-07 15:40    42  ***********************
+  82    2020-03-07 15:41    43  ************************
+ ...    ..(  4 skipped).    ..  ************************
+  87    2020-03-07 15:46    43  ************************
+  88    2020-03-07 15:47    44  *************************
+  89    2020-03-07 15:48    44  *************************
+  90    2020-03-07 15:49    44  *************************
+  91    2020-03-07 15:50    45  **************************
+ ...    ..(  4 skipped).    ..  **************************
+  96    2020-03-07 15:55    45  **************************
+  97    2020-03-07 15:56    44  *************************
+ ...    ..(  3 skipped).    ..  *************************
+ 101    2020-03-07 16:00    44  *************************
+ 102    2020-03-07 16:01    43  ************************
+ 103    2020-03-07 16:02    43  ************************
+ 104    2020-03-07 16:03    44  *************************
+ 105    2020-03-07 16:04    44  *************************
+ 106    2020-03-07 16:05    44  *************************
+ 107    2020-03-07 16:06    45  **************************
+ 108    2020-03-07 16:07    45  **************************
+ 109    2020-03-07 16:08    46  ***************************
+ 110    2020-03-07 16:09    46  ***************************
+ 111    2020-03-07 16:10    47  ****************************
+ 112    2020-03-07 16:11    47  ****************************
+ 113    2020-03-07 16:12    48  *****************************
+ ...    ..(  7 skipped).    ..  *****************************
+ 121    2020-03-07 16:20    48  *****************************
+ 122    2020-03-07 16:21    49  ******************************
+ ...    ..(  4 skipped).    ..  ******************************
+ 127    2020-03-07 16:26    49  ******************************
+ 128    2020-03-07 16:27    50  *******************************
+ ...    ..( 19 skipped).    ..  *******************************
+ 148    2020-03-07 16:47    50  *******************************
+ 149    2020-03-07 16:48    49  ******************************
+ ...    ..(  3 skipped).    ..  ******************************
+ 153    2020-03-07 16:52    49  ******************************
+ 154    2020-03-07 16:53    48  *****************************
+ ...    ..( 20 skipped).    ..  *****************************
+ 175    2020-03-07 17:14    48  *****************************
+ 176    2020-03-07 17:15    43  ************************
+ 177    2020-03-07 17:16    48  *****************************
+ 178    2020-03-07 17:17    28  *********
+ 179    2020-03-07 17:18    29  **********
+ 180    2020-03-07 17:19    22  ***
+ 181    2020-03-07 17:20    22  ***
+ 182    2020-03-07 17:21    23  ****
+
+SCT Error Recovery Control:
+           Read: Disabled
+          Write: Disabled
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x0002  2            0  R_ERR response for data FIS
+0x0005  2            0  R_ERR response for non-data FIS
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
+0x000b  2            0  CRC errors within host-to-device FIS
+0x000d  2            0  Non-CRC errors within host-to-device FIS
+

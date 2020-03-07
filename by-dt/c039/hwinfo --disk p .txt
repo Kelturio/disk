@@ -1,0 +1,28 @@
+25: SCSI 200.0: 10600 Disk
+  [Created at block.245]
+  Unique ID: OqSM.y3omHbwAvN2
+  Parent ID: MZfG.LwLZmU2x6Z6
+  SysFS ID: /class/block/sdc
+  SysFS BusID: 2:0:0:0
+  SysFS Device Link: /devices/pci0000:00/0000:00:14.0/usb2/2-6/2-6.1/2-6.1.1/2-6.1.1:1.0/host2/target2:0:0/2:0:0:0
+  Hardware Class: disk
+  Model: "ASMT 2115"
+  Vendor: usb 0x174c "ASMT"
+  Device: usb 0x1153 "2115"
+  Revision: "0"
+  Serial ID: "00000000000000000000"
+  Driver: "usb-storage", "sd"
+  Driver Modules: "usb_storage"
+  Device File: /dev/sdc (/dev/sg2)
+  Device Files: /dev/sdc, /dev/disk/by-id/ata-Hitachi_HTS545050B9A300_090627PB4406Q7H4UR4A, /dev/disk/by-id/wwn-0x5000cca597d04984, /dev/disk/by-path/pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0
+  Device Number: block 8:32-8:47 (char 21:2)
+  Module Alias: "usb:v174Cp1153d0001dc00dsc00dp00ic08isc06ip50in00"
+  Driver Info #0:
+    Driver Status: uas is active
+    Driver Activation Cmd: "modprobe uas"
+  Driver Info #1:
+    Driver Status: usb_storage is active
+    Driver Activation Cmd: "modprobe usb_storage"
+  Drive status: no medium
+  Config Status: cfg=new, avail=yes, need=no, active=unknown
+  Attached to: #20 (USB Controller)

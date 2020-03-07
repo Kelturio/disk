@@ -107,3 +107,60 @@ downloader() {
 
 # File: /home/searinox/.cargo/env
 export PATH="$HOME/.cargo/bin:$PATH"
+
+
+script --flush --quiet --return /tmp/ansible-output.txt --command "my-ansible-command"
+script --flush --quiet --return /tmp/ansible-output.txt --command "my-ansible-command" > /dev/null
+
+script -q /dev/null cargo build < /dev/null | less -R
+script -q /dev/null ls | cat
+script --return --quiet -c "[executable string]" /dev/null
+0<&- script -qfc "git status" /dev/null | less -R
+faketty() {
+    script -qfc "$(printf "%q " "$@")" /dev/null
+}
+function faketty { script -qfc "$(printf "%q " "$@")" /dev/null; }
+faketty() {                       
+    0</dev/null script --quiet --flush --return --command "$(printf "%q " "$@")" /dev/null
+}
+
+command 2> >(while read line; do echo -e "\e[01;31m$line\e[0m" >&2; done)
+command 2> >(while read line; do echo -e "$(tput setaf 1)$line$(tput sgr0)" >&2; done)
+
+command 2> >(sed $'s,.*,\e[31m&\e[m,'>&2)
+color()(set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2)3>&1
+
+
+# Red STDERR
+# rse <command string>
+function rse()
+{
+    # We need to wrap each phrase of the command in quotes to preserve arguments that contain whitespace
+    # Execute the command, swap STDOUT and STDERR, colour STDOUT, swap back
+    ((eval $(for phrase in "$@"; do echo -n "'$phrase' "; done)) 3>&1 1>&2 2>&3 | sed -e "s/^\(.*\)$/$(echo -en \\033)[31;1m\1$(echo -en \\033)[0m/") 3>&1 1>&2 2>&3
+}
+#You can add set -o pipefail; before (eval for redirect exit code – kvaps Jun 27 '19 at 14:34
+
+
+color() {
+      printf '\033[%sm%s\033[m\n' "$@"
+      # usage color "31;5" "string"
+      # 0 default
+      # 5 blink, 1 strong, 4 underlined
+      # fg: 31 red,  32 green, 33 yellow, 34 blue, 35 purple, 36 cyan, 37 white
+      # bg: 40 black, 41 red, 44 blue, 45 purple
+      }
+string="Hello world!"
+color '31;1' "$string" >&2
+
+
+exec 9>&2
+exec 8> >(
+    while IFS='' read -r line || [ -n "$line" ]; do
+       echo -e "\033[31m${line}\033[0m"
+    done
+)
+function undirect(){ exec 2>&9; }
+function redirect(){ exec 2>&8; }
+trap "redirect;" DEBUG
+PROMPT_COMMAND='undirect;'

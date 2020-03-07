@@ -1,0 +1,4 @@
+KNAME MOUNTPOINT                UUID                                 FSTYPE   SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE WWN                TRAN LABEL     MODEL            SERIAL
+sdx                                                                         465,8G    512     512     512    1 disk 0x5000cca597d04984 usb            2115             090627PB4406Q7H4UR4A
+sdx1  /media/searinox/PQSERVICE EAEE-EB49                            vfat     9,8G    512     512     512    1 part 0x5000cca597d04984      PQSERVICE                  
+sdx2  /media/searinox/ACER      EA48D34E48D317E1                     ntfs     456G    512     512     512    1 part 0x5000cca597d04984      ACER                       

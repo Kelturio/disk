@@ -1,0 +1,11 @@
+29: None 00.0: 11300 Partition
+  [Created at block.434]
+  Unique ID: DjND.SE1wIdpsiiC
+  Parent ID: OqSM.y3omHbwAvN2
+  SysFS ID: /class/block/sdc/sdc2
+  Hardware Class: partition
+  Model: "Partition"
+  Device File: /dev/sdc2
+  Device Files: /dev/sdc2, /dev/disk/by-id/ata-Hitachi_HTS545050B9A300_090627PB4406Q7H4UR4A-part2, /dev/disk/by-id/wwn-0x5000cca597d04984-part2, /dev/disk/by-label/ACER, /dev/disk/by-partuuid/b89e0ccf-02, /dev/disk/by-path/pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0-part2, /dev/disk/by-uuid/EA48D34E48D317E1
+  Config Status: cfg=new, avail=yes, need=no, active=unknown
+  Attached to: #27 (Disk)

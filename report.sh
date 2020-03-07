@@ -4,6 +4,8 @@
 
 #set -eu
 
+shopt -s expand_aliases ; source ~/.bash_aliases
+
 echo "Akk Disk Indexer Script" ; sudo echo ""
 
 [ "$(id -u)" == "0" ] && { show_message --error $"Cannot run as root user" ; exit 1 ; }
@@ -43,6 +45,11 @@ pipe () {
 	bat "$log" ; lfa+=("$log")
 }
 
+faketty() { 0</dev/null script --quiet --flush --return --command "$(printf "%q " "$@")" /dev/null ; }
+
+alias tree="tree -C"
+alias inxi="inxi"
+
 [ "$1" != "" ] && disk=$1 || read -p 'dev disk: ' disk
 [ "$2" != "" ] && dt=$2 || read -p 'dev tag: ' dt
 
@@ -57,14 +64,24 @@ echo -e "\$disk\t= $disk\n\$dt \t= $dt\n\$id \t= $id\n\$cwd\t= $cwd\n\$lwd\t= $l
 [ -d "$lwd/tree" ] || mkdir -pv "$lwd/tree" 2>&1 | bat
 [ ! -L "$iwd" ] && ln -rs "$lwd" "$iwd" 2>&1 | bat
 
-rm "$lwd/tree -a"*.txt "$lwd/tree -a"*.json "$lwd/tree -a"*.htm 2>&1 | bat
+rm -f "$lwd/tree -a"*.txt "$lwd/tree -a"*.json "$lwd/tree -a"*.htm 2>&1 | bat
 treeown | bat && rm "$lwd/tree/tree -a"*.{txt,json,htm} 2>&1 | bat 
 
 log="$lwd/gsp.tmp" ; > "$log" ; output_list=("o KNAME" "po KNAME" "o NAME" "po NAME")
 for args in "${output_list[@]}" ; do out+="$(lsblk -ln -$args $dd)\n" ; done
+out+="Drives:\nPartition:\nUnmounted:\n"
 echo -e "$out" | sort -u | sed '/^$/d' > "$log" ; echo "Filesystem.*Size.*Use.*Mounted on" >> "$log" ; bat "$log"
 
-pipe "$dt.id<ls -alFR" "/dev/disk" fgrep fawk "sed 1i$dt" ; pause
+#log="$lwd/gsp.tmp" ; > "$log" ; output_list=("o KNAME" "po KNAME" "o NAME" "po NAME")
+#for args in "${output_list[@]}" ; do out+="$(lsblk -ln -$args $dd)\n" ; done
+#echo -e "$out" | sort -u | sed '/^$/d' > "$log" ; echo "Filesystem.*Size.*Use.*Mounted on" >> "$log" ; bat "$log"
+
+
+tree /dev/disk > "$lwd/$dt.id.txt" ; bat "$lwd/$dt.id.txt" 
+
+pause
+#pipe "$dt.id<ls -alFR" "/dev/disk" agrep fawk "sed 1i$dt" ; pause
+#pipe "$dt.id<ls -alFR" "/dev/disk" fgrep fawk "sed 1i$dt" ; pause
 pipe "hdparm -I" "$dd"
 pipe "smartctl -a" "$dd"
 pipe "smartctl -x" "$dd"
@@ -73,7 +90,7 @@ pipe "inxi -Dopluxxx" "" "grep -f $lwd/gsp.tmp -A 1"
 pipe "df -hP" "" fgrep
 pipe "mount -l" "" fgrep
 pipe "lsblk -lo" "$cols $dd"
-
+: '
 sed '1d' "$lwd/lsblk -lo.txt" | while read -r line ; do
 	kname=$(awk '{print $1}' <<< "$line")
 	echo "\$kname = $kname"
@@ -98,9 +115,10 @@ sed '1d' "$lwd/lsblk -lo.txt" | while read -r line ; do
 	cd "$cwd"
 	treeown | bat
 done
-
+'
+sleep 1
 { for lf in "${lfa[@]}"; do echo "$lf" ; sed -i "s/$disk/sdx/g" "$lf" ; done } | bat
 
-#rm "$lwd/"*.tmp
+#rm -f "$lwd/"*.tmp
 
 echo -e "\nDONE"
