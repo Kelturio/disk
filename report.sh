@@ -4,23 +4,24 @@
 
 #set -eu
 
-shopt -s expand_aliases ; source ~/.bash_aliases
-
 echo "Akk Disk Indexer Script" ; sudo echo ""
 
-[ "$(id -u)" == "0" ] && { show_message --error $"Cannot run as root user" ; exit 1 ; }
+[[ "$(id -u)" == "0" ]] && { show_message --error $"Cannot run as root user" ; exit 1 ; }
 
-[ -d "$HOME/Git/disk" ] && cd "$HOME/Git/disk"
+shopt -s expand_aliases ; source ~/.bash_aliases
+alias tree="tree -C" ; alias bat="bat --paging never"
+
+[[ -d "$HOME/Git/disk" ]] && cd "$HOME/Git/disk"
 
 # This is all the interface you need.
 # Remember, that this burns FD=3!
-_passback() { while [ 1 -lt $# ]; do printf '%q=%q;' "$1" "${!1}"; shift; done; return $1; }
+_passback() { while [[ 1 -lt $# ]]; do printf '%q=%q;' "$1" "${!1}"; shift; done; return $1; }
 passback() { _passback "$@" "$?"; }
 _capture() { { out="$("${@:2}" 3<&-; "$2_" >&3)"; ret=$?; printf "%q=%q;" "$1" "$out"; } 3>&1; echo "(exit $ret)"; }
 capture() { eval "$(_capture "$@")"; }
 
 
-pause () { read -p 'Press [Enter] key to continue...' ; clear ; }
+pause () { read -p 'Press [Enter] key to continue...' ; }
 
 treew(){
 #   log="$lwd/tree/tree -a p$pn $uuid.txt" ; tree -a "$mountpoint" 2>&1 | tee > "$log" ; bat --paging never "$log"
@@ -32,7 +33,7 @@ own () { [[ -O "$1" ]] && : || { sudo chown $USER:$USER "$1" && echo -e "chowned
 
 treeown () { for file in "$lwd/tree/tree -a"*.{txt,json,htm} ; do own "$file" ; done ; }
 
-hwi () { log="$lwd/hwinfo --$1 p$pn $uuid.txt" ; out=$(hwinfo --$1 --only /dev/$kname) ; [ -z "$out" ] && : || { echo "$out" > "$log" ; bat "$log" ; } ; }
+hwi () { log="$lwd/hwinfo --$1 p$pn $uuid.txt" ; out=$(hwinfo --$1 --only /dev/$kname) ; [[ -z "$out" ]] && : || { echo "$out" > "$log" ; bat "$log" ; } ; }
 
 fgrep () { grep -f "$lwd/gsp.tmp" $1 ; }
 
@@ -47,11 +48,9 @@ pipe () {
 
 faketty() { 0</dev/null script --quiet --flush --return --command "$(printf "%q " "$@")" /dev/null ; }
 
-alias tree="tree -C"
-alias inxi="inxi"
 
-[ "$1" != "" ] && disk=$1 || read -p 'dev disk: ' disk
-[ "$2" != "" ] && dt=$2 || read -p 'dev tag: ' dt
+[[ $1 != "" ]] && disk=$1 || read -p 'dev disk: ' disk
+[[ $2 != "" ]] && dt=$2 || read -p 'dev tag: ' dt
 
 id=$(ls -alFR /dev/disk/by-id | grep "/$disk" | awk '{print $9}' | head -n 1)
 cwd=$(pwd) ; lwd="$cwd/by-dt/$dt" ; iwd="$cwd/by-id/$id"
@@ -61,16 +60,16 @@ declare -a lfa
 
 echo -e "\$disk\t= $disk\n\$dt \t= $dt\n\$id \t= $id\n\$cwd\t= $cwd\n\$lwd\t= $lwd\n\$iwd\t= $iwd\n" | bat ; pause
 
-[ -d "$lwd/tree" ] || mkdir -pv "$lwd/tree" 2>&1 | bat
-[ ! -L "$iwd" ] && ln -rs "$lwd" "$iwd" 2>&1 | bat
+[[ -d "$lwd/tree" ]] || mkdir -pv "$lwd/tree" 2>&1 | bat
+[[ ! -L "$iwd" ]] && ln -rs "$lwd" "$iwd" 2>&1 | bat
 
 rm -f "$lwd/tree -a"*.txt "$lwd/tree -a"*.json "$lwd/tree -a"*.htm 2>&1 | bat
 treeown | bat && rm "$lwd/tree/tree -a"*.{txt,json,htm} 2>&1 | bat 
 
 log="$lwd/gsp.tmp" ; > "$log" ; output_list=("o KNAME" "po KNAME" "o NAME" "po NAME")
 for args in "${output_list[@]}" ; do out+="$(lsblk -ln -$args $dd)\n" ; done
-out+="Drives:\nPartition:\nUnmounted:\n"
-echo -e "$out" | sort -u | sed '/^$/d' > "$log" ; echo "Filesystem.*Size.*Use.*Mounted on" >> "$log" ; bat "$log"
+out+="Filesystem.*Size.*Use.*Mounted on\n" ; out+="Drives:\nPartition:\nUnmounted:\n"
+echo -e "$out" | sort -u | sed '/^$/d' > "$log" ; bat "$log"
 
 #log="$lwd/gsp.tmp" ; > "$log" ; output_list=("o KNAME" "po KNAME" "o NAME" "po NAME")
 #for args in "${output_list[@]}" ; do out+="$(lsblk -ln -$args $dd)\n" ; done
@@ -80,13 +79,13 @@ echo -e "$out" | sort -u | sed '/^$/d' > "$log" ; echo "Filesystem.*Size.*Use.*M
 tree /dev/disk > "$lwd/$dt.id.txt" ; bat "$lwd/$dt.id.txt" 
 
 pause
-#pipe "$dt.id<ls -alFR" "/dev/disk" agrep fawk "sed 1i$dt" ; pause
-#pipe "$dt.id<ls -alFR" "/dev/disk" fgrep fawk "sed 1i$dt" ; pause
+pipe "$dt.id<ls -alFR" "/dev/disk" fgrep fawk "sed 1i$dt" ; pause
 pipe "hdparm -I" "$dd"
 pipe "smartctl -a" "$dd"
 pipe "smartctl -x" "$dd"
 pipe "smartctl -P show" "$dd"
-pipe "inxi -Dopluxxx" "" "grep -f $lwd/gsp.tmp -A 1"
+grepv () { grep -v -e "Local Storage: total:" | sed 's/Partition.*\n//' ; }
+pipe "inxi -Dopluxxx" "--indent-min 800" "grep -f $lwd/gsp.tmp -A 1" grepv ; pause
 pipe "df -hP" "" fgrep
 pipe "mount -l" "" fgrep
 pipe "lsblk -lo" "$cols $dd"
@@ -97,14 +96,14 @@ sed '1d' "$lwd/lsblk -lo.txt" | while read -r line ; do
 	mountpoint=$(lsblk -no MOUNTPOINT /dev/$kname | head -n 1)
 	uuid=$(lsblk -no UUID /dev/$kname | head -n 1)
 	pn=$(sed "s/$disk//" <<< "$kname")	
-	if [ $(cut -c1-3 <<< "$kname") == "dm-" ]; then
+	if [[ $(cut -c1-3 <<< "$kname") == "dm-" ]]; then
 		name=$(lsblk -no NAME /dev/$kname | head -n 1)
 		puuid=$(sed "s/luks-//" <<< "$name")
 		pn="$(blkid --uuid "$puuid" | sed "s=$dd==")c"
 	fi
 	echo -e "\$kname\t\t= $kname\n\$mountpoint\t= $mountpoint\n\$uuid\t\t= $uuid\n\$pn \t\t= $pn\n\$name\t\t= $name\n\$puuid\t\t= $puuid\n" | bat
 	hwi "disk" ; hwi "partition"
-	[ -z "$mountpoint" ] && continue
+	[[ -z "$mountpoint" ]] && continue
 	treew "$lwd/tree/tree -a p$pn $uuid.txt" "-a" "$mountpoint"
 	treew "$lwd/tree/tree -afi p$pn $uuid.txt" "-afi" "$mountpoint"
 	treew "$lwd/tree/tree -adfi p$pn $uuid.txt" "-adfi" "$mountpoint"

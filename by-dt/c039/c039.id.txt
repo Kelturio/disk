@@ -1,0 +1,16 @@
+c039
+ata-Hitachi_HTS545050B9A300_090627PB4406Q7H4UR4A -> ../../sdx
+ata-Hitachi_HTS545050B9A300_090627PB4406Q7H4UR4A-part1 -> ../../sdx1
+ata-Hitachi_HTS545050B9A300_090627PB4406Q7H4UR4A-part2 -> ../../sdx2
+wwn-0x5000cca597d04984 -> ../../sdx
+wwn-0x5000cca597d04984-part1 -> ../../sdx1
+wwn-0x5000cca597d04984-part2 -> ../../sdx2
+ACER -> ../../sdx2
+PQSERVICE -> ../../sdx1
+b89e0ccf-01 -> ../../sdx1
+b89e0ccf-02 -> ../../sdx2
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0 -> ../../sdx
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0-part1 -> ../../sdx1
+pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0-part2 -> ../../sdx2
+EA48D34E48D317E1 -> ../../sdx2
+EAEE-EB49 -> ../../sdx1

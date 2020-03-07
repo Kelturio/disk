@@ -111,9 +111,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 script --flush --quiet --return /tmp/ansible-output.txt --command "my-ansible-command"
 script --flush --quiet --return /tmp/ansible-output.txt --command "my-ansible-command" > /dev/null
-
-script -q /dev/null cargo build < /dev/null | less -R
-script -q /dev/null ls | cat
+#script -q /dev/null cargo build < /dev/null | less -R
+#script -q /dev/null ls | cat
 script --return --quiet -c "[executable string]" /dev/null
 0<&- script -qfc "git status" /dev/null | less -R
 faketty() {
@@ -164,3 +163,15 @@ function undirect(){ exec 2>&9; }
 function redirect(){ exec 2>&8; }
 trap "redirect;" DEBUG
 PROMPT_COMMAND='undirect;'
+
+
+dir=`cd "$dir"`
+
+absolute_path() {
+    cd "$(dirname "$1")"
+    case $(basename $1) in
+        ..) echo "$(dirname $(pwd))";;
+        .)  echo "$(pwd)";;
+        *)  echo "$(pwd)/$(basename $1)";;
+    esac
+}
