@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Mar  7 17:20:46 2020 CET
+Local Time is:    Sat Mar  7 18:07:48 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 
@@ -56,28 +56,28 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE
-  1 Raw_Read_Error_Rate     0x000b   084   084   062    Pre-fail  Always       -       305
+  1 Raw_Read_Error_Rate     0x000b   084   084   062    Pre-fail  Always       -       19988480
   2 Throughput_Performance  0x0005   100   100   040    Pre-fail  Offline      -       0
   3 Spin_Up_Time            0x0007   142   142   033    Pre-fail  Always       -       2
   4 Start_Stop_Count        0x0012   089   089   000    Old_age   Always       -       18451
   5 Reallocated_Sector_Ct   0x0033   100   100   005    Pre-fail  Always       -       0
   7 Seek_Error_Rate         0x000b   100   100   067    Pre-fail  Always       -       0
   8 Seek_Time_Performance   0x0005   100   100   040    Pre-fail  Offline      -       0
-  9 Power_On_Hours          0x0012   087   087   000    Old_age   Always       -       5755
+  9 Power_On_Hours          0x0012   087   087   000    Old_age   Always       -       5756
  10 Spin_Retry_Count        0x0013   100   100   060    Pre-fail  Always       -       0
  12 Power_Cycle_Count       0x0032   097   097   000    Old_age   Always       -       5366
 191 G-Sense_Error_Rate      0x000a   100   100   000    Old_age   Always       -       0
 192 Power-Off_Retract_Count 0x0032   100   100   000    Old_age   Always       -       49
-193 Load_Cycle_Count        0x0012   094   094   000    Old_age   Always       -       61442
-194 Temperature_Celsius     0x0002   239   239   000    Old_age   Always       -       23 (Min/Max 7/56)
-196 Reallocated_Event_Count 0x0032   100   100   000    Old_age   Always       -       3
-197 Current_Pending_Sector  0x0022   100   100   000    Old_age   Always       -       6
+193 Load_Cycle_Count        0x0012   094   094   000    Old_age   Always       -       61443
+194 Temperature_Celsius     0x0002   189   189   000    Old_age   Always       -       29 (Min/Max 7/56)
+196 Reallocated_Event_Count 0x0032   100   100   000    Old_age   Always       -       8
+197 Current_Pending_Sector  0x0022   100   100   000    Old_age   Always       -       11
 198 Offline_Uncorrectable   0x0008   100   100   000    Old_age   Offline      -       0
 199 UDMA_CRC_Error_Count    0x000a   200   200   000    Old_age   Always       -       0
 223 Load_Retry_Count        0x000a   100   100   000    Old_age   Always       -       0
 
 SMART Error Log Version: 1
-ATA Error Count: 75 (device log contains only the most recent five errors)
+ATA Error Count: 112 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -92,90 +92,90 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 75 occurred at disk power-on lifetime: 5755 hours (239 days + 19 hours)
+Error 112 occurred at disk power-on lifetime: 5756 hours (239 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 30 10 26 27 e3  Error: UNC 48 sectors at LBA = 0x03272610 = 52897296
+  40 51 04 ec ad 67 41  Error: UNC 4 sectors at LBA = 0x0167adec = 23571948
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 80 c0 25 27 e0 00      00:02:34.800  READ DMA EXT
-  25 00 80 c0 2c 27 e0 00      00:02:34.800  READ DMA EXT
-  25 00 80 40 2c 27 e0 00      00:02:34.800  READ DMA EXT
-  25 00 80 c0 2b 27 e0 00      00:02:34.800  READ DMA EXT
-  25 00 80 40 2b 27 e0 00      00:02:34.800  READ DMA EXT
+  25 00 08 e8 ad 67 40 00      00:46:18.800  READ DMA EXT
+  e5 00 00 00 00 00 00 00      00:46:17.200  CHECK POWER MODE
+  25 00 08 78 b8 7e 40 00      00:46:13.500  READ DMA EXT
+  e5 00 00 00 00 00 00 00      00:46:13.400  CHECK POWER MODE
+  25 00 08 b0 5f 50 40 00      00:46:09.700  READ DMA EXT
 
-Error 74 occurred at disk power-on lifetime: 5755 hours (239 days + 19 hours)
+Error 111 occurred at disk power-on lifetime: 5756 hours (239 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 10 10 26 27 e3  Error: UNC 16 sectors at LBA = 0x03272610 = 52897296
+  40 51 04 7c b8 7e 42  Error: UNC 4 sectors at LBA = 0x027eb87c = 41859196
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 80 a0 25 27 e0 00      00:02:30.900  READ DMA EXT
-  25 00 80 a0 2c 27 e0 00      00:02:30.900  READ DMA EXT
-  25 00 80 20 2c 27 e0 00      00:02:30.900  READ DMA EXT
-  25 00 80 a0 2b 27 e0 00      00:02:30.900  READ DMA EXT
-  25 00 80 20 2b 27 e0 00      00:02:30.900  READ DMA EXT
+  25 00 08 78 b8 7e 40 00      00:46:13.500  READ DMA EXT
+  e5 00 00 00 00 00 00 00      00:46:13.400  CHECK POWER MODE
+  25 00 08 b0 5f 50 40 00      00:46:09.700  READ DMA EXT
+  e5 00 00 00 00 00 00 00      00:46:08.900  CHECK POWER MODE
+  25 da 08 78 a7 fd 40 00      00:46:05.200  READ DMA EXT
 
-Error 73 occurred at disk power-on lifetime: 5755 hours (239 days + 19 hours)
+Error 110 occurred at disk power-on lifetime: 5756 hours (239 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 70 10 26 27 e3  Error: UNC 112 sectors at LBA = 0x03272610 = 52897296
+  40 51 06 b2 5f 50 41  Error: UNC 6 sectors at LBA = 0x01505fb2 = 22044594
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 80 00 26 27 e0 00      00:02:27.100  READ DMA EXT
-  25 00 80 80 25 27 e0 00      00:02:27.100  READ DMA EXT
-  25 00 80 80 2c 27 e0 00      00:02:27.100  READ DMA EXT
-  25 00 80 00 2c 27 e0 00      00:02:27.100  READ DMA EXT
-  25 00 80 80 2b 27 e0 00      00:02:27.100  READ DMA EXT
+  25 00 08 b0 5f 50 40 00      00:46:09.700  READ DMA EXT
+  e5 00 00 00 00 00 00 00      00:46:08.900  CHECK POWER MODE
+  25 da 08 78 a7 fd 40 00      00:46:05.200  READ DMA EXT
+  b0 da 00 00 4f c2 00 00      00:46:04.100  SMART RETURN STATUS
+  b0 d0 01 00 4f c2 00 00      00:46:04.100  SMART READ DATA
 
-Error 72 occurred at disk power-on lifetime: 5755 hours (239 days + 19 hours)
+Error 109 occurred at disk power-on lifetime: 5756 hours (239 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 50 10 26 27 e3  Error: UNC 80 sectors at LBA = 0x03272610 = 52897296
+  40 51 08 78 a7 fd 42  Error: UNC 8 sectors at LBA = 0x02fda778 = 50177912
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 80 e0 25 27 e0 00      00:02:23.200  READ DMA EXT
-  25 00 80 60 25 27 e0 00      00:02:23.200  READ DMA EXT
-  25 00 80 60 2c 27 e0 00      00:02:23.200  READ DMA EXT
-  25 00 80 e0 2b 27 e0 00      00:02:23.200  READ DMA EXT
-  25 00 80 e0 24 27 e0 00      00:02:23.200  READ DMA EXT
+  25 da 08 78 a7 fd 40 00      00:46:05.200  READ DMA EXT
+  b0 da 00 00 4f c2 00 00      00:46:04.100  SMART RETURN STATUS
+  b0 d0 01 00 4f c2 00 00      00:46:04.100  SMART READ DATA
+  b0 d1 01 00 4f c2 00 00      00:46:04.100  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  ec 00 01 00 00 00 00 00      00:46:04.100  IDENTIFY DEVICE
 
-Error 71 occurred at disk power-on lifetime: 5755 hours (239 days + 19 hours)
+Error 108 occurred at disk power-on lifetime: 5755 hours (239 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 30 10 26 27 e3  Error: UNC 48 sectors at LBA = 0x03272610 = 52897296
+  40 51 08 78 a7 fd 42  Error: UNC 8 sectors at LBA = 0x02fda778 = 50177912
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 80 c0 25 27 e0 00      00:02:19.400  READ DMA EXT
-  25 00 80 40 25 27 e0 00      00:02:19.400  READ DMA EXT
-  25 00 80 40 2c 27 e0 00      00:02:19.400  READ DMA EXT
-  25 00 80 c0 24 27 e0 00      00:02:19.400  READ DMA EXT
-  25 00 20 c0 24 27 e0 00      00:02:19.400  READ DMA EXT
+  25 00 08 78 a7 fd 40 00      00:18:30.600  READ DMA EXT
+  e5 00 00 00 00 00 00 00      00:18:26.100  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00      00:18:21.100  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00      00:18:16.100  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00      00:18:11.100  CHECK POWER MODE
 
 SMART Self-test log structure revision number 1
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
