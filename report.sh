@@ -37,7 +37,7 @@ hwi () { log="$lwd/hwinfo --$1 p$pn $uuid.txt" ; out=$(hwinfo --$1 --only /dev/$
 
 fgrep () { grep -f "$lwd/gsp.tmp" $1 ; }
 
-fawk () { awk '{print $9" "$10" "$11}' ; }
+fawk () { awk '{print $9" "$10" "$11}' | sed 's=../../=/dev/=' ; }
 
 pipe () {
 	log="$lwd/${1/<*/}.txt" ; cmd="${1/*</}"
@@ -47,6 +47,10 @@ pipe () {
 }
 
 faketty() { 0</dev/null script --quiet --flush --return --command "$(printf "%q " "$@")" /dev/null ; }
+
+grepv () { grep -v -e "Local Storage: total:" | sed 's/Partition.*\n//' ; }
+
+seddev () { sed 's=../../=/dev/=' ; }
 
 
 [[ $1 != "" ]] && disk=$1 || read -p 'dev disk: ' disk
@@ -80,11 +84,12 @@ tree /dev/disk > "$lwd/$dt.id.txt" ; bat "$lwd/$dt.id.txt"
 
 pause
 pipe "$dt.id<ls -alFR" "/dev/disk" fgrep fawk "sed 1i$dt" ; pause
+pipe "stat -c%N" "/dev/disk/*/*" fgrep seddev ; pause
 pipe "hdparm -I" "$dd"
 pipe "smartctl -a" "$dd"
 pipe "smartctl -x" "$dd"
 pipe "smartctl -P show" "$dd"
-grepv () { grep -v -e "Local Storage: total:" | sed 's/Partition.*\n//' ; }
+
 pipe "inxi -Dopluxxx" "--indent-min 800" "grep -f $lwd/gsp.tmp -A 1" grepv ; pause
 pipe "df -hP" "" fgrep
 pipe "mount -l" "" fgrep

@@ -175,3 +175,7 @@ absolute_path() {
         *)  echo "$(pwd)/$(basename $1)";;
     esac
 }
+
+alias realpath="perl -MCwd -e 'print Cwd::realpath(\$ARGV[0]),qq<\n>'"
+
+stat -c%N /dev/disk/*/*
