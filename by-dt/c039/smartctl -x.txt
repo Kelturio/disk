@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Mar  8 02:16:49 2020 CET
+Local Time is:    Mon Mar  9 01:00:55 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -69,13 +69,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   087   087   000    -    5764
+  9 Power_On_Hours          -O--C-   087   087   000    -    5786
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   097   097   000    -    5366
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    49
-193 Load_Cycle_Count        -O--C-   094   094   000    -    61443
-194 Temperature_Celsius     -O----   177   177   000    -    31 (Min/Max 7/56)
+193 Load_Cycle_Count        -O--C-   094   094   000    -    61456
+194 Temperature_Celsius     -O----   183   183   000    -    30 (Min/Max 7/56)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    8
 197 Current_Pending_Sector  -O---K   100   100   000    -    11
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -207,7 +207,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
+Current Temperature:                    30 Celsius
 Power Cycle Min/Max Temperature:     22/31 Celsius
 Lifetime    Min/Max Temperature:      7/56 Celsius
 Lifetime    Average Temperature:        36 Celsius
@@ -218,18 +218,18 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    478 (239)
+Temperature History Size (Index):    478 (169)
 
 Index    Estimated Time   Temperature Celsius
- 240    2020-03-07 18:19    29  **********
- ...    ..(125 skipped).    ..  **********
- 366    2020-03-07 20:25    29  **********
- 367    2020-03-07 20:26    30  ***********
- ...    ..( 77 skipped).    ..  ***********
- 445    2020-03-07 21:44    30  ***********
- 446    2020-03-07 21:45    31  ************
- ...    ..(270 skipped).    ..  ************
- 239    2020-03-08 02:16    31  ************
+ 170    2020-03-08 17:03    30  ***********
+ ...    ..(219 skipped).    ..  ***********
+ 390    2020-03-08 20:43    30  ***********
+ 391    2020-03-08 20:44    29  **********
+ ...    ..( 98 skipped).    ..  **********
+  12    2020-03-08 22:23    29  **********
+  13    2020-03-08 22:24    30  ***********
+ ...    ..(155 skipped).    ..  ***********
+ 169    2020-03-09 01:00    30  ***********
 
 SCT Error Recovery Control:
            Read: Disabled

@@ -179,3 +179,10 @@ absolute_path() {
 alias realpath="perl -MCwd -e 'print Cwd::realpath(\$ARGV[0]),qq<\n>'"
 
 stat -c%N /dev/disk/*/*
+
+
+$ git clone https://github.com/bartobri/no-more-secrets.git
+$ cd ./no-more-secrets
+$ make nms
+$ make sneakers             ## Optional
+$ sudo make install

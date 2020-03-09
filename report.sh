@@ -9,9 +9,10 @@ echo "Akk Disk Indexer Script" ; sudo echo ""
 [[ "$(id -u)" == "0" ]] && { show_message --error $"Cannot run as root user" ; exit 1 ; }
 
 shopt -s expand_aliases ; source ~/.bash_aliases
-alias tree="tree -C" ; alias bat="bat --paging never"
+#alias tree="tree -C"
+alias bat="bat --paging never"
 
-[[ -d "$HOME/Git/disk" ]] && cd "$HOME/Git/disk"
+[[ -d "$HOME/Git/disk" ]] && cd "$HOME/Git/disk" || exit
 
 # This is all the interface you need.
 # Remember, that this burns FD=3!
@@ -26,18 +27,18 @@ pause () { read -p 'Press [Enter] key to continue...' ; }
 treew(){
 #   log="$lwd/tree/tree -a p$pn $uuid.txt" ; tree -a "$mountpoint" 2>&1 | tee > "$log" ; bat --paging never "$log"
 #	tree $2 "$3" 2>&1 | tee > "$1" ; bat --paging never "$1"
-	sudo tree -o "$1" $2 "$3" #; bat --paging never "$1"
+	sudo tree -o "$1" "$2" "$3"
 }
 
-own () { [[ -O "$1" ]] && : || { sudo chown $USER:$USER "$1" && echo -e "chowned\t$1" ; } ; }
+own () { [[ -O "$1" ]] && : || { sudo chown "$USER":"$USER" "$1" && echo -e "chowned\t$1" ; } ; }
 
 treeown () { for file in "$lwd/tree/tree -a"*.{txt,json,htm} ; do own "$file" ; done ; }
 
 hwi () { log="$lwd/hwinfo --$1 p$pn $uuid.txt" ; out=$(hwinfo --$1 --only /dev/$kname) ; [[ -z "$out" ]] && : || { echo "$out" > "$log" ; bat "$log" ; } ; }
 
-fgrep () { grep -f "$lwd/gsp.tmp" $1 ; }
+fgrep () { grep -f "$lwd/gsp.tmp" ; }
 
-fawk () { awk '{print $9" "$10" "$11}' | sed 's=../../=/dev/=' ; }
+fawk () { awk '{print $9" "$10" "$11}' | seddev ; }
 
 pipe () {
 	log="$lwd/${1/<*/}.txt" ; cmd="${1/*</}"
@@ -48,14 +49,13 @@ pipe () {
 
 faketty() { 0</dev/null script --quiet --flush --return --command "$(printf "%q " "$@")" /dev/null ; }
 
-grepv () { grep -v -e "Local Storage: total:" | sed 's/Partition.*\n//' ; }
-
 seddev () { sed 's=../../=/dev/=' ; }
 
 
-[[ $1 != "" ]] && disk=$1 || read -p 'dev disk: ' disk
-[[ $2 != "" ]] && dt=$2 || read -p 'dev tag: ' dt
+[[ $1 != "" ]] && disk=$1 || read -rp 'dev disk: ' disk
+[[ $2 != "" ]] && dt=$2 || read -rp 'dev tag: ' dt
 
+#id=$(ls -alFR /dev/disk/by-id | grep "/$disk" | awk '{print $9}' | head -n 1)
 id=$(ls -alFR /dev/disk/by-id | grep "/$disk" | awk '{print $9}' | head -n 1)
 cwd=$(pwd) ; lwd="$cwd/by-dt/$dt" ; iwd="$cwd/by-id/$id"
 dd="/dev/$disk" ; echo "\$dd = $dd"
@@ -70,30 +70,33 @@ echo -e "\$disk\t= $disk\n\$dt \t= $dt\n\$id \t= $id\n\$cwd\t= $cwd\n\$lwd\t= $l
 rm -f "$lwd/tree -a"*.txt "$lwd/tree -a"*.json "$lwd/tree -a"*.htm 2>&1 | bat
 treeown | bat && rm "$lwd/tree/tree -a"*.{txt,json,htm} 2>&1 | bat 
 
-log="$lwd/gsp.tmp" ; > "$log" ; output_list=("o KNAME" "po KNAME" "o NAME" "po NAME")
-for args in "${output_list[@]}" ; do out+="$(lsblk -ln -$args $dd)\n" ; done
-out+="Filesystem.*Size.*Use.*Mounted on\n" ; out+="Drives:\nPartition:\nUnmounted:\n"
-echo -e "$out" | sort -u | sed '/^$/d' > "$log" ; bat "$log"
+log="$lwd/gsp.tmp" ; output_list=("o KNAME" "po KNAME" "o NAME" "po NAME")
+gsp=$( (for args in "${output_list[@]}" ; do lsblk -ln -$args "$dd" ; done) | sort -u)
+gsp+=$(printf "\nFilesystem.*Size.*Use.*Mounted on\n" ; printf "Drives:\nPartition:\nUnmounted:\n")
+echo "$gsp" | sed '/^$/d' > "$log" ; bat "$log"
+gspd=$(head -n -4 "$log") ; echo "$gspd" | tee "$lwd/gspd.tmp" | bat
 
 #log="$lwd/gsp.tmp" ; > "$log" ; output_list=("o KNAME" "po KNAME" "o NAME" "po NAME")
-#for args in "${output_list[@]}" ; do out+="$(lsblk -ln -$args $dd)\n" ; done
-#echo -e "$out" | sort -u | sed '/^$/d' > "$log" ; echo "Filesystem.*Size.*Use.*Mounted on" >> "$log" ; bat "$log"
+#for args in "${output_list[@]}" ; do gsp+="$(lsblk -ln -$args $dd)\n" ; done
+#echo -e "$gsp" | sort -u | sed '/^$/d' > "$log" ; echo "Filesystem.*Size.*Use.*Mounted on" >> "$log" ; bat "$log"
 
+tree /dev/disk > "$lwd/$dt.id.txt" ; bat "$lwd/$dt.id.txt"
 
-tree /dev/disk > "$lwd/$dt.id.txt" ; bat "$lwd/$dt.id.txt" 
-
-pause
 pipe "$dt.id<ls -alFR" "/dev/disk" fgrep fawk "sed 1i$dt" ; pause
-pipe "stat -c%N" "/dev/disk/*/*" fgrep seddev ; pause
+pipe "stat -c%N" "/dev/disk/*/*" fgrep seddev
+
+pipe "inxi -Dopluxxx" "--indent-min 800" "grep -f $lwd/gsp.tmp -A 1" ; pause
+log="$lwd/inxi -Dopluxxx.txt" ; inxitxt=$(cat "$log")
+(grep -n -f "$lwd/gsp.tmp" <<< "$inxitxt" ; grep -nA 1 -f "$lwd/gspd.tmp" <<< "$inxitxt") | 
+sort -nu | sed 's/:/: /' | awk '$1="";1' | sed '/^$/d' > "$log" ; bat "$log"
+
+pipe "lsblk -lo" "$cols $dd"
+pipe "df -hP" "" fgrep
+pipe "mount -l" "" fgrep ; pause
 pipe "hdparm -I" "$dd"
 pipe "smartctl -a" "$dd"
 pipe "smartctl -x" "$dd"
 pipe "smartctl -P show" "$dd"
-
-pipe "inxi -Dopluxxx" "--indent-min 800" "grep -f $lwd/gsp.tmp -A 1" grepv ; pause
-pipe "df -hP" "" fgrep
-pipe "mount -l" "" fgrep
-pipe "lsblk -lo" "$cols $dd"
 : '
 sed '1d' "$lwd/lsblk -lo.txt" | while read -r line ; do
 	kname=$(awk '{print $1}' <<< "$line")

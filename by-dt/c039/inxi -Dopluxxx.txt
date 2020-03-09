@@ -1,15 +1,9 @@
-Drives:
---
-  ID-4: /dev/sdx type: USB vendor: Hitachi model: HTS545050B9A300 size: 465.76 GiB rotation: 5400 rpm 
-  serial: 090627PB4406Q7H4UR4A scheme: MBR 
-Partition:
-  ID-1: / size: 468.45 GiB used: 411.06 GiB (87.7%) fs: ext4 dev: /dev/nvme0n1p1 label: N/A 
---
-  ID-3: /media/searinox/ACER size: 455.99 GiB used: 188.97 GiB (41.4%) fs: ntfs dev: /dev/sdx2 label: ACER 
-  uuid: EA48D34E48D317E1 
---
-  ID-5: /media/searinox/PQSERVICE size: 9.76 GiB used: 8.22 GiB (84.3%) fs: vfat dev: /dev/sdx1 label: PQSERVICE 
-  uuid: EAEE-EB49 
---
-Unmounted:
-  ID-1: /dev/sdb1 size: 3.64 TiB fs: crypto_luks label: N/A uuid: 96482eb3-0380-4504-a2ac-9a00c63af7b4 
+ Drives:
+ ID-4: /dev/sdx type: USB vendor: Hitachi model: HTS545050B9A300 size: 465.76 GiB rotation: 5400 rpm
+ serial: 090627PB4406Q7H4UR4A scheme: MBR
+ Partition:
+ ID-3: /media/searinox/ACER size: 455.99 GiB used: 188.97 GiB (41.4%) fs: ntfs dev: /dev/sdx2 label: ACER
+ uuid: EA48D34E48D317E1
+ ID-5: /media/searinox/PQSERVICE size: 9.76 GiB used: 8.22 GiB (84.3%) fs: vfat dev: /dev/sdx1 label: PQSERVICE
+ uuid: EAEE-EB49
+ Unmounted:
