@@ -4,12 +4,10 @@
 
 #set -eu
 
-_red()    { IFS= ; while read -r line; do echo -e '\e[31m'$line'\e[0m'; done; }
-
-clr_usage() { echo -e 'usage:\n  some-command | colorize {black, red, green, yellow, blue, purple, cyan, white}' >&2 ; exit 1 ; }
+clr_usage() { echo -e 'usage:\n  some-cmd | clr -p {black, red, green, yellow, blue, purple, cyan, white}\n  clr $color $text ' >&2 ; exit 1 ; }
 
 clr() {
-	eflag= ; pflag=
+	pflag=
 	while [[ "$1" =~ ^- && ! "$1" == "--" ]]; do case $1 in
 		-p | --printf ) pflag=1 ;;
 		*) clr_usage ;;
@@ -17,14 +15,14 @@ clr() {
 	if [[ "$1" == '--' ]]; then shift; fi
 	[[ -z $1 ]] && clr_usage
 	case $1 in
-		black)  color='30' ;;
-		red)    color='31' ;;
-		green)  color='32' ;;
-		yellow | y) color='33' ;;
-		blue)   color='34' ;;
-		purple) color='35' ;;
-		cyan | c)   color='36' ;;
-		white)  color='36' ;;
+		black	| b)	color='30' ;;
+		red		| r)	color='31' ;;
+		green	| g)	color='32' ;;
+		yellow	| y)	color='33' ;;
+		blue	| be)	color='34' ;;
+		purple	| p)	color='35' ;;
+		cyan	| c)	color='36' ;;
+		white	| w)	color='36' ;;
 		*) clr_usage ;;
 	esac
 	if [[ -z $2 ]] ; then
@@ -42,7 +40,7 @@ cnf=": command not found"
 calias() { if which "$2" ; clr c "$2: found" ; then alias "$1"="${3:-$1}" ; else clr y "$1$cnf" ; alias "$1"="${4:-$1}" ; fi ; alias "$1" | clr y ; }
 calias "bat" "bat" "bat --paging never" "cat"
 calias "sudo" "doas" "$(which doas) --"
-#alias tree="tree -C"
+#calias "tree" "tree" "tree -C"
 
 if which "ssh-askpass" ; then clr y "ssh-askpass: found" ; export SUDO_ASKPASS=$(which "ssh-askpass") ; else clr y "ssh-askpass$cnf" ; fi
 sudo clr y "\$SUDO_ASKPASS = $SUDO_ASKPASS" | bat
@@ -50,13 +48,6 @@ sudo clr y "\$SUDO_ASKPASS = $SUDO_ASKPASS" | bat
 [[ "$(id -u)" == "0" ]] && { clr red "Cannot run as root user" ; exit 1 ; }
 
 [[ -d "$HOME/Git/disk" ]] && cd "$HOME/Git/disk" || exit
-
-# This is all the interface you need.
-# Remember, that this burns FD=3!
-_passback() { while [[ 1 -lt $# ]]; do printf '%q=%q;' "$1" "${!1}"; shift; done; return $1; }
-passback() { _passback "$@" "$?"; }
-_capture() { { out="$("${@:2}" 3<&-; "$2_" >&3)"; ret=$?; printf "%q=%q;" "$1" "$out"; } 3>&1; echo "(exit $ret)"; }
-capture() { eval "$(_capture "$@")"; }
 
 pause () { clr y "pause" ; } #pause () { read -rp 'Press [Enter] key to continue...' ; }
 
@@ -87,7 +78,7 @@ seddev () { sed 's=../../=/dev/=' ; }
 [[ $2 != "" ]] && dt=$2 || read -rp 'dev tag: ' dt
 
 dd="/dev/$disk" ; clr y "\$dd = $dd"
-id=$(stat -c%N /dev/disk/by-id/* | seddev | grep "$dd'" | head -n +1 | awk '{print $1}') ; id=${id##*/} ; idx=${id%\'}
+id=$(stat -c%N /dev/disk/by-id/* | seddev | grep "$dd'" | head -n +1 | awk '{print $1}') ; id=${id##*/} ; id=${id%\'}
 cwd=$(pwd) ; lwd="$cwd/by-dt/$dt" ; iwd="$cwd/by-id/$id"
 cols="KNAME,MOUNTPOINT,UUID,FSTYPE,SIZE,MIN-IO,PHY-SEC,LOG-SEC,ROTA,TYPE,WWN,TRAN,LABEL,MODEL,SERIAL"
 declare -a lfa

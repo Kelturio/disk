@@ -1,4 +1,4 @@
 KNAME MOUNTPOINT            UUID                                 FSTYPE       SIZE MIN-IO PHY-SEC LOG-SEC ROTA TYPE  WWN TRAN LABEL MODEL            SERIAL
-sdx                                                                           3,7T   4096    4096     512    1 disk      usb        Elements 25A3    574343374B30565236393341
-sdx1                        96482eb3-0380-4504-a2ac-9a00c63af7b4 crypto_LUKS  3,7T   4096    4096     512    1 part                                  
-dm-1  /media/searinox/image 961e0e3b-1056-40ea-90e3-46537d3af922 ext4         3,7T   4096    4096     512    1 crypt          image                  
+sdx                                                                           3.7T   4096    4096     512    1 disk      usb        Elements 25A3    574343374B30565236393341
+sdx1                        96482eb3-0380-4504-a2ac-9a00c63af7b4 crypto_LUKS  3.7T   4096    4096     512    1 part                                  
+dm-1  /media/searinox/image 961e0e3b-1056-40ea-90e3-46537d3af922 ext4         3.7T   4096    4096     512    1 crypt          image                  

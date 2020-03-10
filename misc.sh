@@ -105,6 +105,14 @@ downloader() {
 }
 
 
+# This is all the interface you need.
+# Remember, that this burns FD=3!
+_passback() { while [[ 1 -lt $# ]]; do printf '%q=%q;' "$1" "${!1}"; shift; done; return $1; }
+passback() { _passback "$@" "$?"; }
+_capture() { { out="$("${@:2}" 3<&-; "$2_" >&3)"; ret=$?; printf "%q=%q;" "$1" "$out"; } 3>&1; echo "(exit $ret)"; }
+capture() { eval "$(_capture "$@")"; }
+
+
 # File: /home/searinox/.cargo/env
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -204,3 +212,7 @@ $ sudo make install
 
 
 sudo apt install libpam0g-dev
+
+
+beautysh - < infile.sh > outfile.sh
+beautysh - < "$HOME/Git/disk/report.sh" > reportb.sh

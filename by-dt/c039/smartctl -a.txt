@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue Mar 10 03:47:35 2020 CET
+Local Time is:    Tue Mar 10 13:01:36 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 
@@ -63,12 +63,12 @@ ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_
   5 Reallocated_Sector_Ct   0x0033   100   100   005    Pre-fail  Always       -       0
   7 Seek_Error_Rate         0x000b   100   100   067    Pre-fail  Always       -       0
   8 Seek_Time_Performance   0x0005   100   100   040    Pre-fail  Offline      -       0
-  9 Power_On_Hours          0x0012   087   087   000    Old_age   Always       -       5813
+  9 Power_On_Hours          0x0012   087   087   000    Old_age   Always       -       5822
  10 Spin_Retry_Count        0x0013   100   100   060    Pre-fail  Always       -       0
  12 Power_Cycle_Count       0x0032   097   097   000    Old_age   Always       -       5366
 191 G-Sense_Error_Rate      0x000a   100   100   000    Old_age   Always       -       0
 192 Power-Off_Retract_Count 0x0032   100   100   000    Old_age   Always       -       49
-193 Load_Cycle_Count        0x0012   094   094   000    Old_age   Always       -       61587
+193 Load_Cycle_Count        0x0012   094   094   000    Old_age   Always       -       61643
 194 Temperature_Celsius     0x0002   189   189   000    Old_age   Always       -       29 (Min/Max 7/56)
 196 Reallocated_Event_Count 0x0032   100   100   000    Old_age   Always       -       8
 197 Current_Pending_Sector  0x0022   100   100   000    Old_age   Always       -       11
@@ -77,7 +77,7 @@ ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_
 223 Load_Retry_Count        0x000a   100   100   000    Old_age   Always       -       0
 
 SMART Error Log Version: 1
-ATA Error Count: 112 (device log contains only the most recent five errors)
+ATA Error Count: 114 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -91,6 +91,40 @@ ATA Error Count: 112 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 114 occurred at disk power-on lifetime: 5822 hours (242 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 06 b2 5f 50 41  Error: UNC 6 sectors at LBA = 0x01505fb2 = 22044594
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 08 b0 5f 50 40 00   2d+19:27:37.600  READ DMA EXT
+  e5 00 00 00 00 00 00 00   2d+19:27:33.900  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00   2d+19:27:28.900  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00   2d+19:27:23.900  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00   2d+19:27:22.300  CHECK POWER MODE
+
+Error 113 occurred at disk power-on lifetime: 5822 hours (242 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 04 ec ad 67 41  Error: UNC 4 sectors at LBA = 0x0167adec = 23571948
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 08 e8 ad 67 40 00   2d+19:27:18.600  READ DMA EXT
+  e5 00 00 00 00 00 00 00   2d+19:27:13.900  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00   2d+19:27:08.900  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00   2d+19:27:03.900  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00   2d+19:26:58.900  CHECK POWER MODE
 
 Error 112 occurred at disk power-on lifetime: 5756 hours (239 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -142,40 +176,6 @@ Error 110 occurred at disk power-on lifetime: 5756 hours (239 days + 20 hours)
   25 da 08 78 a7 fd 40 00      00:46:05.200  READ DMA EXT
   b0 da 00 00 4f c2 00 00      00:46:04.100  SMART RETURN STATUS
   b0 d0 01 00 4f c2 00 00      00:46:04.100  SMART READ DATA
-
-Error 109 occurred at disk power-on lifetime: 5756 hours (239 days + 20 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 08 78 a7 fd 42  Error: UNC 8 sectors at LBA = 0x02fda778 = 50177912
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 da 08 78 a7 fd 40 00      00:46:05.200  READ DMA EXT
-  b0 da 00 00 4f c2 00 00      00:46:04.100  SMART RETURN STATUS
-  b0 d0 01 00 4f c2 00 00      00:46:04.100  SMART READ DATA
-  b0 d1 01 00 4f c2 00 00      00:46:04.100  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  ec 00 01 00 00 00 00 00      00:46:04.100  IDENTIFY DEVICE
-
-Error 108 occurred at disk power-on lifetime: 5755 hours (239 days + 19 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 08 78 a7 fd 42  Error: UNC 8 sectors at LBA = 0x02fda778 = 50177912
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 78 a7 fd 40 00      00:18:30.600  READ DMA EXT
-  e5 00 00 00 00 00 00 00      00:18:26.100  CHECK POWER MODE
-  e5 00 00 00 00 00 00 00      00:18:21.100  CHECK POWER MODE
-  e5 00 00 00 00 00 00 00      00:18:16.100  CHECK POWER MODE
-  e5 00 00 00 00 00 00 00      00:18:11.100  CHECK POWER MODE
 
 SMART Self-test log structure revision number 1
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]

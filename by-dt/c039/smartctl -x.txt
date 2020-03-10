@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue Mar 10 03:47:36 2020 CET
+Local Time is:    Tue Mar 10 13:01:37 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -69,13 +69,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   087   087   000    -    5813
+  9 Power_On_Hours          -O--C-   087   087   000    -    5822
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   097   097   000    -    5366
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    49
-193 Load_Cycle_Count        -O--C-   094   094   000    -    61588
-194 Temperature_Celsius     -O----   196   196   000    -    28 (Min/Max 7/56)
+193 Load_Cycle_Count        -O--C-   094   094   000    -    61643
+194 Temperature_Celsius     -O----   189   189   000    -    29 (Min/Max 7/56)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    8
 197 Current_Pending_Sector  -O---K   100   100   000    -    11
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 112 (device log contains only the most recent 4 errors)
+Device Error Count: 114 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,6 +120,40 @@ Device Error Count: 112 (device log contains only the most recent 4 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 114 [0] occurred at disk power-on lifetime: 5822 hours (242 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 06 00 00 01 50 5f b2 41 00  Error: UNC 6 sectors at LBA = 0x01505fb2 = 22044594
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 01 50 5f b0 40 00  2d+19:27:37.600  READ DMA EXT
+  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:33.900  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:28.900  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:23.900  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:22.300  CHECK POWER MODE
+
+Error 113 [3] occurred at disk power-on lifetime: 5822 hours (242 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 04 00 00 01 67 ad ec 41 00  Error: UNC 4 sectors at LBA = 0x0167adec = 23571948
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 01 67 ad e8 40 00  2d+19:27:18.600  READ DMA EXT
+  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:13.900  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:08.900  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:03.900  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:26:58.900  CHECK POWER MODE
 
 Error 112 [2] occurred at disk power-on lifetime: 5756 hours (239 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -155,40 +189,6 @@ Error 111 [1] occurred at disk power-on lifetime: 5756 hours (239 days + 20 hour
   e5 00 00 00 00 00 00 00 00 00 00 00 00     00:46:08.900  CHECK POWER MODE
   25 00 da 00 08 00 00 02 fd a7 78 40 00     00:46:05.200  READ DMA EXT
 
-Error 110 [0] occurred at disk power-on lifetime: 5756 hours (239 days + 20 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 06 00 00 01 50 5f b2 41 00  Error: UNC 6 sectors at LBA = 0x01505fb2 = 22044594
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 01 50 5f b0 40 00     00:46:09.700  READ DMA EXT
-  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:46:08.900  CHECK POWER MODE
-  25 00 da 00 08 00 00 02 fd a7 78 40 00     00:46:05.200  READ DMA EXT
-  b0 00 da 00 00 00 00 00 c2 4f 00 00 00     00:46:04.100  SMART RETURN STATUS
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00     00:46:04.100  SMART READ DATA
-
-Error 109 [3] occurred at disk power-on lifetime: 5756 hours (239 days + 20 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 02 fd a7 78 42 00  Error: UNC 8 sectors at LBA = 0x02fda778 = 50177912
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 da 00 08 00 00 02 fd a7 78 40 00     00:46:05.200  READ DMA EXT
-  b0 00 da 00 00 00 00 00 c2 4f 00 00 00     00:46:04.100  SMART RETURN STATUS
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00     00:46:04.100  SMART READ DATA
-  b0 00 d1 00 01 00 00 00 c2 4f 00 00 00     00:46:04.100  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:46:04.100  IDENTIFY DEVICE
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -207,7 +207,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
+Current Temperature:                    29 Celsius
 Power Cycle Min/Max Temperature:     22/31 Celsius
 Lifetime    Min/Max Temperature:      7/56 Celsius
 Lifetime    Average Temperature:        36 Celsius
@@ -218,55 +218,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    478 (342)
+Temperature History Size (Index):    478 (418)
 
 Index    Estimated Time   Temperature Celsius
- 343    2020-03-09 19:50    29  **********
- ...    ..( 28 skipped).    ..  **********
- 372    2020-03-09 20:19    29  **********
- 373    2020-03-09 20:20    30  ***********
- 374    2020-03-09 20:21    30  ***********
- 375    2020-03-09 20:22    29  **********
- ...    ..(  3 skipped).    ..  **********
- 379    2020-03-09 20:26    29  **********
- 380    2020-03-09 20:27    30  ***********
- ...    ..(  2 skipped).    ..  ***********
- 383    2020-03-09 20:30    30  ***********
- 384    2020-03-09 20:31    29  **********
- 385    2020-03-09 20:32    30  ***********
- ...    ..( 54 skipped).    ..  ***********
- 440    2020-03-09 21:27    30  ***********
- 441    2020-03-09 21:28    29  **********
- 442    2020-03-09 21:29    29  **********
- 443    2020-03-09 21:30    30  ***********
- 444    2020-03-09 21:31    29  **********
- ...    ..(  5 skipped).    ..  **********
- 450    2020-03-09 21:37    29  **********
- 451    2020-03-09 21:38    30  ***********
- 452    2020-03-09 21:39    29  **********
- 453    2020-03-09 21:40    29  **********
- 454    2020-03-09 21:41    29  **********
- 455    2020-03-09 21:42    30  ***********
- 456    2020-03-09 21:43    30  ***********
- 457    2020-03-09 21:44    29  **********
- ...    ..(343 skipped).    ..  **********
- 323    2020-03-10 03:28    29  **********
- 324    2020-03-10 03:29    28  *********
- 325    2020-03-10 03:30    29  **********
- ...    ..(  3 skipped).    ..  **********
- 329    2020-03-10 03:34    29  **********
- 330    2020-03-10 03:35    28  *********
- 331    2020-03-10 03:36    28  *********
- 332    2020-03-10 03:37    29  **********
- 333    2020-03-10 03:38    29  **********
- 334    2020-03-10 03:39    29  **********
- 335    2020-03-10 03:40    28  *********
- 336    2020-03-10 03:41    28  *********
- 337    2020-03-10 03:42    29  **********
- 338    2020-03-10 03:43    28  *********
- ...    ..(  2 skipped).    ..  *********
- 341    2020-03-10 03:46    28  *********
- 342    2020-03-10 03:47    29  **********
+ 419    2020-03-10 05:04    29  **********
+ ...    ..( 24 skipped).    ..  **********
+ 444    2020-03-10 05:29    29  **********
+ 445    2020-03-10 05:30    28  *********
+ ...    ..(242 skipped).    ..  *********
+ 210    2020-03-10 09:33    28  *********
+ 211    2020-03-10 09:34    27  ********
+ ...    ..( 32 skipped).    ..  ********
+ 244    2020-03-10 10:07    27  ********
+ 245    2020-03-10 10:08    28  *********
+ ...    ..(157 skipped).    ..  *********
+ 403    2020-03-10 12:46    28  *********
+ 404    2020-03-10 12:47    29  **********
+ ...    ..( 13 skipped).    ..  **********
+ 418    2020-03-10 13:01    29  **********
 
 SCT Error Recovery Control:
            Read: Disabled
