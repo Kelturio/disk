@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue Mar 10 13:01:37 2020 CET
+Local Time is:    Tue Mar 10 16:36:55 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -65,19 +65,19 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   084   084   062    -    19988480
   2 Throughput_Performance  P-S---   100   100   040    -    0
   3 Spin_Up_Time            POS---   142   142   033    -    2
-  4 Start_Stop_Count        -O--C-   089   089   000    -    18451
+  4 Start_Stop_Count        -O--C-   089   089   000    -    18452
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   087   087   000    -    5822
+  9 Power_On_Hours          -O--C-   087   087   000    -    5826
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    5366
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    5367
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    49
-193 Load_Cycle_Count        -O--C-   094   094   000    -    61643
+193 Load_Cycle_Count        -O--C-   094   094   000    -    61646
 194 Temperature_Celsius     -O----   189   189   000    -    29 (Min/Max 7/56)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    8
-197 Current_Pending_Sector  -O---K   100   100   000    -    11
+196 Reallocated_Event_Count -O--CK   100   100   000    -    11
+197 Current_Pending_Sector  -O---K   100   100   000    -    12
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 114 (device log contains only the most recent 4 errors)
+Device Error Count: 160 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,7 +121,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 114 [0] occurred at disk power-on lifetime: 5822 hours (242 days + 14 hours)
+Error 160 [2] occurred at disk power-on lifetime: 5825 hours (242 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -132,13 +132,30 @@ Error 114 [0] occurred at disk power-on lifetime: 5822 hours (242 days + 14 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 01 50 5f b0 40 00  2d+19:27:37.600  READ DMA EXT
-  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:33.900  CHECK POWER MODE
-  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:28.900  CHECK POWER MODE
-  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:23.900  CHECK POWER MODE
-  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:22.300  CHECK POWER MODE
+  25 00 00 00 08 00 00 01 50 5f b0 40 00     00:34:51.900  READ DMA EXT
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:34:51.200  CHECK POWER MODE
+  25 00 00 00 08 00 00 02 fd a7 78 40 00     00:34:46.700  READ DMA EXT
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:34:45.900  CHECK POWER MODE
+  25 00 00 00 06 00 00 00 00 2f 23 40 00     00:34:44.300  READ DMA EXT
 
-Error 113 [3] occurred at disk power-on lifetime: 5822 hours (242 days + 14 hours)
+Error 159 [1] occurred at disk power-on lifetime: 5825 hours (242 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 05 00 00 02 fd a7 7b 42 00  Error: UNC 5 sectors at LBA = 0x02fda77b = 50177915
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 02 fd a7 78 40 00     00:34:46.700  READ DMA EXT
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:34:45.900  CHECK POWER MODE
+  25 00 00 00 06 00 00 00 00 2f 23 40 00     00:34:44.300  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 2f 22 40 00     00:34:44.300  READ DMA EXT
+  25 00 00 00 38 00 00 00 00 2e ea 40 00     00:34:44.300  READ DMA EXT
+
+Error 158 [0] occurred at disk power-on lifetime: 5825 hours (242 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -149,30 +166,13 @@ Error 113 [3] occurred at disk power-on lifetime: 5822 hours (242 days + 14 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 01 67 ad e8 40 00  2d+19:27:18.600  READ DMA EXT
-  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:13.900  CHECK POWER MODE
-  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:08.900  CHECK POWER MODE
-  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:27:03.900  CHECK POWER MODE
-  e5 00 00 00 00 00 00 00 00 00 00 00 00  2d+19:26:58.900  CHECK POWER MODE
+  25 00 00 00 08 00 00 01 67 ad e8 40 00     00:34:37.400  READ DMA EXT
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:34:35.900  CHECK POWER MODE
+  25 00 00 00 08 00 00 02 7e b8 78 40 00     00:34:32.200  READ DMA EXT
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:34:32.200  CHECK POWER MODE
+  25 00 00 00 08 00 00 01 50 5f b0 40 00     00:34:28.500  READ DMA EXT
 
-Error 112 [2] occurred at disk power-on lifetime: 5756 hours (239 days + 20 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 04 00 00 01 67 ad ec 41 00  Error: UNC 4 sectors at LBA = 0x0167adec = 23571948
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 01 67 ad e8 40 00     00:46:18.800  READ DMA EXT
-  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:46:17.200  CHECK POWER MODE
-  25 00 00 00 08 00 00 02 7e b8 78 40 00     00:46:13.500  READ DMA EXT
-  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:46:13.400  CHECK POWER MODE
-  25 00 00 00 08 00 00 01 50 5f b0 40 00     00:46:09.700  READ DMA EXT
-
-Error 111 [1] occurred at disk power-on lifetime: 5756 hours (239 days + 20 hours)
+Error 157 [3] occurred at disk power-on lifetime: 5825 hours (242 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -183,11 +183,11 @@ Error 111 [1] occurred at disk power-on lifetime: 5756 hours (239 days + 20 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 02 7e b8 78 40 00     00:46:13.500  READ DMA EXT
-  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:46:13.400  CHECK POWER MODE
-  25 00 00 00 08 00 00 01 50 5f b0 40 00     00:46:09.700  READ DMA EXT
-  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:46:08.900  CHECK POWER MODE
-  25 00 da 00 08 00 00 02 fd a7 78 40 00     00:46:05.200  READ DMA EXT
+  25 00 00 00 08 00 00 02 7e b8 78 40 00     00:34:32.200  READ DMA EXT
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:34:32.200  CHECK POWER MODE
+  25 00 00 00 08 00 00 01 50 5f b0 40 00     00:34:28.500  READ DMA EXT
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:34:27.700  CHECK POWER MODE
+  25 00 00 00 08 00 00 02 fd a7 78 40 00     00:34:22.900  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -208,7 +208,7 @@ SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                    29 Celsius
-Power Cycle Min/Max Temperature:     22/31 Celsius
+Power Cycle Min/Max Temperature:     25/30 Celsius
 Lifetime    Min/Max Temperature:      7/56 Celsius
 Lifetime    Average Temperature:        36 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -218,24 +218,44 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    478 (418)
+Temperature History Size (Index):    478 (145)
 
 Index    Estimated Time   Temperature Celsius
- 419    2020-03-10 05:04    29  **********
- ...    ..( 24 skipped).    ..  **********
- 444    2020-03-10 05:29    29  **********
- 445    2020-03-10 05:30    28  *********
- ...    ..(242 skipped).    ..  *********
- 210    2020-03-10 09:33    28  *********
- 211    2020-03-10 09:34    27  ********
+ 146    2020-03-10 08:39    28  *********
+ ...    ..( 63 skipped).    ..  *********
+ 210    2020-03-10 09:43    28  *********
+ 211    2020-03-10 09:44    27  ********
  ...    ..( 32 skipped).    ..  ********
- 244    2020-03-10 10:07    27  ********
- 245    2020-03-10 10:08    28  *********
+ 244    2020-03-10 10:17    27  ********
+ 245    2020-03-10 10:18    28  *********
  ...    ..(157 skipped).    ..  *********
- 403    2020-03-10 12:46    28  *********
- 404    2020-03-10 12:47    29  **********
- ...    ..( 13 skipped).    ..  **********
- 418    2020-03-10 13:01    29  **********
+ 403    2020-03-10 12:56    28  *********
+ 404    2020-03-10 12:57    29  **********
+ ...    ..(160 skipped).    ..  **********
+  87    2020-03-10 15:38    29  **********
+  88    2020-03-10 15:39    25  ******
+ ...    ..(  2 skipped).    ..  ******
+  91    2020-03-10 15:42    25  ******
+  92    2020-03-10 15:43    26  *******
+ ...    ..(  2 skipped).    ..  *******
+  95    2020-03-10 15:46    26  *******
+  96    2020-03-10 15:47    27  ********
+ ...    ..(  3 skipped).    ..  ********
+ 100    2020-03-10 15:51    27  ********
+ 101    2020-03-10 15:52    28  *********
+ 102    2020-03-10 15:53    29  **********
+ 103    2020-03-10 15:54    29  **********
+ 104    2020-03-10 15:55    29  **********
+ 105    2020-03-10 15:56    30  ***********
+ ...    ..(  5 skipped).    ..  ***********
+ 111    2020-03-10 16:02    30  ***********
+ 112    2020-03-10 16:03    29  **********
+ ...    ..(  9 skipped).    ..  **********
+ 122    2020-03-10 16:13    29  **********
+ 123    2020-03-10 16:14    30  ***********
+ 124    2020-03-10 16:15    29  **********
+ ...    ..( 20 skipped).    ..  **********
+ 145    2020-03-10 16:36    29  **********
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -248,8 +268,8 @@ ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0005  2            0  R_ERR response for non-data FIS
-0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

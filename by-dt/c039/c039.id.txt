@@ -1,16 +1,21 @@
 c039
+/dev/disk/by-id:  
 ata-Hitachi_HTS545050B9A300_090627PB4406Q7H4UR4A -> /dev/sdx
 ata-Hitachi_HTS545050B9A300_090627PB4406Q7H4UR4A-part1 -> /dev/sdx1
 ata-Hitachi_HTS545050B9A300_090627PB4406Q7H4UR4A-part2 -> /dev/sdx2
 wwn-0x5000cca597d04984 -> /dev/sdx
 wwn-0x5000cca597d04984-part1 -> /dev/sdx1
 wwn-0x5000cca597d04984-part2 -> /dev/sdx2
+/dev/disk/by-label:  
 ACER -> /dev/sdx2
 PQSERVICE -> /dev/sdx1
+/dev/disk/by-partuuid:  
 b89e0ccf-01 -> /dev/sdx1
 b89e0ccf-02 -> /dev/sdx2
+/dev/disk/by-path:  
 pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0 -> /dev/sdx
 pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0-part1 -> /dev/sdx1
 pci-0000:00:14.0-usb-0:6.1.1:1.0-scsi-0:0:0:0-part2 -> /dev/sdx2
+/dev/disk/by-uuid:  
 EA48D34E48D317E1 -> /dev/sdx2
 EAEE-EB49 -> /dev/sdx1
