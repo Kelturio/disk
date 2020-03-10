@@ -7,14 +7,14 @@ Device Model:     Hitachi HTS545050B9A300
 Serial Number:    090627PB4406Q7H4UR4A
 LU WWN Device Id: 5 000cca 597d04984
 Firmware Version: PB4OC60F
-User Capacity:    500.107.862.016 bytes [500 GB]
+User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Mar  9 01:00:55 2020 CET
+Local Time is:    Tue Mar 10 03:47:36 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -69,13 +69,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   087   087   000    -    5786
+  9 Power_On_Hours          -O--C-   087   087   000    -    5813
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   097   097   000    -    5366
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    49
-193 Load_Cycle_Count        -O--C-   094   094   000    -    61456
-194 Temperature_Celsius     -O----   183   183   000    -    30 (Min/Max 7/56)
+193 Load_Cycle_Count        -O--C-   094   094   000    -    61588
+194 Temperature_Celsius     -O----   196   196   000    -    28 (Min/Max 7/56)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    8
 197 Current_Pending_Sector  -O---K   100   100   000    -    11
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -207,7 +207,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
+Current Temperature:                    28 Celsius
 Power Cycle Min/Max Temperature:     22/31 Celsius
 Lifetime    Min/Max Temperature:      7/56 Celsius
 Lifetime    Average Temperature:        36 Celsius
@@ -218,18 +218,55 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    478 (169)
+Temperature History Size (Index):    478 (342)
 
 Index    Estimated Time   Temperature Celsius
- 170    2020-03-08 17:03    30  ***********
- ...    ..(219 skipped).    ..  ***********
- 390    2020-03-08 20:43    30  ***********
- 391    2020-03-08 20:44    29  **********
- ...    ..( 98 skipped).    ..  **********
-  12    2020-03-08 22:23    29  **********
-  13    2020-03-08 22:24    30  ***********
- ...    ..(155 skipped).    ..  ***********
- 169    2020-03-09 01:00    30  ***********
+ 343    2020-03-09 19:50    29  **********
+ ...    ..( 28 skipped).    ..  **********
+ 372    2020-03-09 20:19    29  **********
+ 373    2020-03-09 20:20    30  ***********
+ 374    2020-03-09 20:21    30  ***********
+ 375    2020-03-09 20:22    29  **********
+ ...    ..(  3 skipped).    ..  **********
+ 379    2020-03-09 20:26    29  **********
+ 380    2020-03-09 20:27    30  ***********
+ ...    ..(  2 skipped).    ..  ***********
+ 383    2020-03-09 20:30    30  ***********
+ 384    2020-03-09 20:31    29  **********
+ 385    2020-03-09 20:32    30  ***********
+ ...    ..( 54 skipped).    ..  ***********
+ 440    2020-03-09 21:27    30  ***********
+ 441    2020-03-09 21:28    29  **********
+ 442    2020-03-09 21:29    29  **********
+ 443    2020-03-09 21:30    30  ***********
+ 444    2020-03-09 21:31    29  **********
+ ...    ..(  5 skipped).    ..  **********
+ 450    2020-03-09 21:37    29  **********
+ 451    2020-03-09 21:38    30  ***********
+ 452    2020-03-09 21:39    29  **********
+ 453    2020-03-09 21:40    29  **********
+ 454    2020-03-09 21:41    29  **********
+ 455    2020-03-09 21:42    30  ***********
+ 456    2020-03-09 21:43    30  ***********
+ 457    2020-03-09 21:44    29  **********
+ ...    ..(343 skipped).    ..  **********
+ 323    2020-03-10 03:28    29  **********
+ 324    2020-03-10 03:29    28  *********
+ 325    2020-03-10 03:30    29  **********
+ ...    ..(  3 skipped).    ..  **********
+ 329    2020-03-10 03:34    29  **********
+ 330    2020-03-10 03:35    28  *********
+ 331    2020-03-10 03:36    28  *********
+ 332    2020-03-10 03:37    29  **********
+ 333    2020-03-10 03:38    29  **********
+ 334    2020-03-10 03:39    29  **********
+ 335    2020-03-10 03:40    28  *********
+ 336    2020-03-10 03:41    28  *********
+ 337    2020-03-10 03:42    29  **********
+ 338    2020-03-10 03:43    28  *********
+ ...    ..(  2 skipped).    ..  *********
+ 341    2020-03-10 03:46    28  *********
+ 342    2020-03-10 03:47    29  **********
 
 SCT Error Recovery Control:
            Read: Disabled

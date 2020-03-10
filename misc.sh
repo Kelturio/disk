@@ -140,6 +140,7 @@ function rse()
 }
 #You can add set -o pipefail; before (eval for redirect exit code – kvaps Jun 27 '19 at 14:34
 
+#https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_codes
 
 color() {
       printf '\033[%sm%s\033[m\n' "$@"
@@ -152,6 +153,20 @@ color() {
 string="Hello world!"
 color '31;1' "$string" >&2
 
+make 2>&1 | sed -e 's/.*\bWARN.*/\x1b[7m&\x1b[0m/i' -e 's/.*\bERR.*/\x1b[93;41m&\x1b[0m/i'
+flasher () { while true; do printf \\e[?5h; sleep 0.1; printf \\e[?5l; read -s -n1 -t1 && break; done; }
+printf \\033c # This will reset the console, similar to the command reset on modern Linux systems
+
+black()  { IFS= ; while read -r line; do echo -e '\e[30m'$line'\e[0m'; done; }
+red()    { IFS= ; while read -r line; do echo -e '\e[31m'$line'\e[0m'; done; }
+green()  { IFS= ; while read -r line; do echo -e '\e[32m'$line'\e[0m'; done; }
+yellow() { IFS= ; while read -r line; do echo -e '\e[33m'$line'\e[0m'; done; }
+blue()   { IFS= ; while read -r line; do echo -e '\e[34m'$line'\e[0m'; done; }
+purple() { IFS= ; while read -r line; do echo -e '\e[35m'$line'\e[0m'; done; }
+cyan()   { IFS= ; while read -r line; do echo -e '\e[36m'$line'\e[0m'; done; }
+white()  { IFS= ; while read -r line; do echo -e '\e[37m'$line'\e[0m'; done; }
+echo '    foo\n    bar' | red
+yellow() { if [[ -z $1 ]] ; then IFS= ; while read -r line; do echo -e '\e[33m'$line'\e[0m' ; done ; else color "0;33;40" "$@" ; fi ; }
 
 exec 9>&2
 exec 8> >(
@@ -186,3 +201,6 @@ $ cd ./no-more-secrets
 $ make nms
 $ make sneakers             ## Optional
 $ sudo make install
+
+
+sudo apt install libpam0g-dev
