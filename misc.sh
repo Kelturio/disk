@@ -187,6 +187,34 @@ function redirect(){ exec 2>&8; }
 trap "redirect;" DEBUG
 PROMPT_COMMAND='undirect;'
 
+# Removing ANSI color codes from text stream
+sed 's/\x1b\[[0-9;]*m//g'
+
+sed 's/\x1b\[[0-9;]*m//g'           # Remove color sequences only
+sed 's/\x1b\[[0-9;]*[a-zA-Z]//g'    # Remove all escape sequences
+sed 's/\x1b\[[0-9;]*[mGKH]//g'      # Remove color and move sequences
+sed 's/\x1b\[[0-9;]*[mGKF]//g'      # Remove color and move sequences
+
+Last escape
+sequence
+character   Purpose
+---------   -------------------------------
+m           Graphics Rendition Mode (including Color)
+G           Horizontal cursor move
+K           Horizontal deletion
+H           New cursor position
+F           Move cursor to previous n lines
+
+perl -pe 's/\e\[[0-9;]*m//g'          # Remove colors only
+perl -pe 's/\e\[[0-9;]*[mG]//g'
+perl -pe 's/\e\[[0-9;]*[mGKH]//g'
+perl -pe 's/\e\[[0-9;]*[a-zA-Z]//g'
+perl -pe 's/\e\[[0-9;]*m(?:\e\[K)?//g' # Adam Katz's trick
+
+# "tput sgr0" left this control character ^(B^[
+# Here is a modified version to take care of that.
+perl -pe 's/\e[\[\(][0-9;]*[mGKFB]//g' logfile.log
+
 
 dir=`cd "$dir"`
 
@@ -216,3 +244,28 @@ sudo apt install libpam0g-dev
 
 beautysh - < infile.sh > outfile.sh
 beautysh - < "$HOME/Git/disk/report.sh" > reportb.sh
+
+
+set -x			# activate debugging from here
+w
+set +x			# stop debugging from here
+
+Table 2-1. Overview of set debugging options
+
+Short notation	Long notation	Result
+set -f	set -o noglob	Disable file name generation using metacharacters (globbing).
+set -v	set -o verbose	Prints shell input lines as they are read.
+set -x	set -o xtrace	Print command traces before executing command.
+
+
+doas apt install colorized-logs
+
+
+printf "%0$(tput cols)d" 0|tr '0' '='
+
+cd ~/Git/argbash/resources
+make install PREFIX=$HOME/.local SYSCONFDIR=$HOME/dotfiles INSTALL_COMPLETION=yes
+
+echo -e " SRC  = $SRC \n DIR  = $DIR \n BASE = $BASE \n FILE = $FILE \n EXT  = $EXT \n "; 
+
+argbash report_parsing.m4 -o report_parsing.sh --strip user-content

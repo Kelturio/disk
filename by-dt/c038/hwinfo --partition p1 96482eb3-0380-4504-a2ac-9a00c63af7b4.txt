@@ -2,10 +2,10 @@
   [Created at block.434]
   Unique ID: h4pj.SE1wIdpsiiC
   Parent ID: 7bWa.4X1PBEB0ZOA
-  SysFS ID: /class/block/sdb/sdb1
+  SysFS ID: /class/block/sdx/sdx1
   Hardware Class: partition
   Model: "Partition"
-  Device File: /dev/sdb1
-  Device Files: /dev/sdb1, /dev/disk/by-id/usb-WD_Elements_25A3_574343374B30565236393341-0:0-part1, /dev/disk/by-partuuid/4cccc2b4-c775-421e-959a-d4520079c1ae, /dev/disk/by-path/pci-0000:00:14.0-usb-0:3:1.0-scsi-0:0:0:0-part1, /dev/disk/by-uuid/96482eb3-0380-4504-a2ac-9a00c63af7b4
+  Device File: /dev/sdx1
+  Device Files: /dev/sdx1, /dev/disk/by-id/usb-WD_Elements_25A3_574343374B30565236393341-0:0-part1, /dev/disk/by-partuuid/4cccc2b4-c775-421e-959a-d4520079c1ae, /dev/disk/by-path/pci-0000:00:14.0-usb-0:3:1.0-scsi-0:0:0:0-part1, /dev/disk/by-uuid/96482eb3-0380-4504-a2ac-9a00c63af7b4
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #25 (Disk)
